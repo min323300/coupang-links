@@ -1,16 +1,125 @@
 {
-  "lastUpdated": "2025-01-13",
+  "lastUpdated": "2026-01-13",
   "products": [
     {
-      "id": 1,
-      "name": "더바른닭 국내산 닭가슴살",
-      "description": "신선한 국내산 닭가슴살",
-      "category": "식품",
-      "link": "https://link.coupang.com/a/dq7rDh",
-      "image": "🍗",
+      "name": "액체세제 빨래세제",
+      "description": "제형: 액체형 장점: 중성세제 용기 타입: 일반형 종류: 일반/드럼공용세제 구성: 본품 쿠팡상품번호: 9116096390 - 26812913660",
+      "link": "https://link.coupang.com/a/dqY3OG",
+      "image": "https://t4c.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/4dd4/73fcb449363f50deb1f5e07e2b4622e556ca3f18b664941febd125b8c0b6.jpg",
+      "category": "생활",
+      "order": 2,
       "active": true,
-      "order": 1
+      "id": 2
+    },
+    {
+      "name": "뉴핏 투에니포 뉴트리 다이어트 쉐이크 쿠키앤크림맛, 600g, 1개",
+      "description": "소비기한(또는 유통기한): 2027-08-19 이거나 그 이후인 상품 개당 용량/중량/정: 600g 섭취방법: 즉석완조리식품 건강식품 타입: 분말 건강식품 사용대상: 성인남녀공용 쿠팡상품번호: 7591045508 - 26569560335",
+      "link": "https://link.coupang.com/a/dremMr",
+      "image": "https://thumbnail2.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/da5b/5f722ebd05bd28e6d563c680a56bb03b89dd8187811c0decd06a32a3d37f.jpg",
+      "category": "식품",
+      "order": 3,
+      "active": true,
+      "id": 3
+    },
+    {
+      "name": "코멧 코지 파우더 도톰한 3겹 화장지 30m",
+      "description": "겹수: 3겹 총 수량: 30롤 쿠팡상품번호: 8056327270 - 22700116361",
+      "link": "https://link.coupang.com/a/drd8rS",
+      "image": "https://t1c.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/966979868318849-2049b77c-4324-44c1-868f-5e83ed157883.jpg",
+      "category": "생활",
+      "order": 4,
+      "active": true,
+      "id": 4
+    },
+    {
+      "name": "G7 퓨어블랙 원두커피믹스",
+      "description": "소비기한(또는 유통기한): 2026-07-25 이거나 그 이후인 상품 카페인 유형: 카페인 맛/향: 아메리카노/블랙 종류: 커피믹스 총 수량: 200개 쿠팡상품번호: 8548534914 - 24639547867",
+      "link": "https://link.coupang.com/a/drd1nG",
+      "image": "https://t5c.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/3ea0/ff2ccddf9849355d1a8172ed9c56c6dbe60dab8d3fd19af9c48c115b9e82.jpg",
+      "category": "식품",
+      "order": 5,
+      "active": true,
+      "id": 5
+    },
+    {
+      "name": "T STANDARD 스너글 액티브 클린코튼 세탁세제",
+      "description": "4L 용량  일반/드럼세탁기 겸용실내건조용, 향기 지속, 강력한 세정력",
+      "link": "https://link.coupang.com/a/drdWq2",
+      "image": "https://thumbnail6.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/image_audit/prod/946a1782-b3b3-4206-9830-e3b0b462c78f_fixing_v2.png",
+      "category": "생활",
+      "order": 6,
+      "active": true,
+      "id": 6
+    },
+    {
+      "name": "햇살닭 The그릴드 닭가슴살 스테이크 5종 / 혼합, 50개, 100g",
+      "description": "총 수량: 50개 쿠팡상품번호: 8279454042 - 24142937899",
+      "link": "https://link.coupang.com/a/dre4uH",
+      "image": "https://t4a.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/84be/f79a7a2b54df206dc488fd310e9176b3276ec486da486244c2688654dba0.jpg",
+      "category": "식품",
+      "order": 7,
+      "active": true,
+      "id": 9
+    },
+    {
+      "name": "잘풀리는집 3겹 클래식 화장지",
+      "description": "겹수: 3겹 펄프종류: 재생펄프 향 유무: 유향 무형광여부: 무형광 총 수량: 12개 쿠팡상품번호: 7751139469 - 19469131918",
+      "link": "https://link.coupang.com/a/drduV9",
+      "image": "https://t4a.coupangcdn.com/thumbnails/remote/212x212ex/image/1025_amir_coupang_oct_80k/440e/89f347886d41432a0ff1f7f06e76dd4a0a8b76c95103a5379dbf726898d4.jpg",
+      "category": "생활",
+      "order": 8,
+      "active": true,
+      "id": 8
+    },
+    {
+      "name": "종가 맛김치, 1.2kg, 1개",
+      "description": "소비기한(또는 유통기한): 2026-01-29 이거나 그 이후인 상품 종류: 맛김치 총 수량: 1개 보관방법: 냉장보관 썰은김치 여부: 썰은김치 쿠팡상품번호: 7769994860 - 17319879727",
+      "link": "https://link.coupang.com/a/drfusI",
+      "image": "https://t4c.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/314933899420630-a3435408-4215-4913-89e1-0fe331bbe605.jpg",
+      "category": "식품",
+      "order": 8,
+      "active": true,
+      "id": 10
+    },
+    {
+      "name": "방앗간청년 서리태흑임자선식, 2개, 500g",
+      "description": "소비기한(또는 유통기한): 2026-10-01 이거나 그 이후인 상품 개당 용량/중량/정: 500g 총 수량: 2개 쿠팡상품번호: 8243824119 - 17653609742",
+      "link": "https://link.coupang.com/a/drfAU5",
+      "image": "https://thumbnail9.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/2c2a/d35868639420909738afabe1c234ba375bdb067c4cd2e0527a0198e3e123.jpg",
+      "category": "식품",
+      "order": 9,
+      "active": true,
+      "id": 11
+    },
+    {
+      "name": "하늘보리 에코 무라벨, 1.5L, 12개",
+      "description": "소비기한(또는 유통기한): 2026-12-02 이거나 그 이후인 상품 타입: 음료 용기 타입: 플라스틱병 전통차 종류: 보리차 가정용/업소용: 가정용 쿠팡상품번호: 7420809688 - 21947270614",
+      "link": "https://link.coupang.com/a/drfGPf",
+      "image": "https://thumbnail7.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/94906645455938-22d605d1-d494-4736-b83c-f2633f95420c.jpg",
+      "category": "식품",
+      "order": 10,
+      "active": true,
+      "id": 12
+    },
+    {
+      "name": "곰곰 무항생제 신선한 왕란 30구",
+      "description": "소비기한(또는 유통기한): 2026-02-05 이거나 그 이후인 상품 계란 구수: 30구 특징: 무항생제 보관방법: 냉장보관 계란 중량규격: 왕란 쿠팡상품번호: 7311127161 - 18730058952",
+      "link": "https://link.coupang.com/a/drfMyR",
+      "image": "https://t5a.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/123076081610037-db6638d2-a4e0-4cc8-a6a8-3760c52602ae.png",
+      "category": "식품",
+      "order": 11,
+      "active": true,
+      "id": 13
     }
   ],
-  "categories": ["전체", "주방", "생활", "IT", "뷰티", "육아", "식품"]
+  "categories": [
+    "전체",
+    "주방",
+    "생활",
+    "IT",
+    "뷰티",
+    "육아",
+    "식품",
+    "반려동물용품"
+  ]
 }
