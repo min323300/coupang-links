@@ -168,7 +168,9 @@
         .product-table th { background: #F9FAFB; font-weight: 600; font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; }
         .product-table tr:last-child td { border-bottom: none; }
         .product-table tr:hover { background: #FAFAFA; }
-        .product-emoji-cell { font-size: 1.5rem; text-align: center; width: 50px; }
+        .product-image-cell { width: 50px; text-align: center; }
+        .product-image-cell img { width: 40px; height: 40px; object-fit: cover; border-radius: 8px; }
+        .product-image-cell .emoji { font-size: 1.5rem; }
         .product-name-cell { font-weight: 600; }
         .product-desc-cell { color: var(--text-secondary); font-size: 0.85rem; }
 
@@ -212,6 +214,7 @@
         .modal-body { padding: 1.5rem; }
         .form-group { margin-bottom: 1rem; }
         .form-label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.4rem; color: var(--text-primary); }
+        .form-hint { font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem; }
 
         .form-input, .form-select, .form-textarea {
             width: 100%;
@@ -229,6 +232,27 @@
         .form-checkbox { display: flex; align-items: center; gap: 0.5rem; }
         .form-checkbox input { width: 18px; height: 18px; }
         .modal-footer { padding: 1rem 1.5rem; border-top: 1px solid var(--border); display: flex; justify-content: flex-end; gap: 0.5rem; }
+
+        .image-preview {
+            width: 60px;
+            height: 60px;
+            border: 2px dashed var(--border);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0.5rem;
+            overflow: hidden;
+            background: #F9FAFB;
+        }
+        .image-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .image-preview .emoji {
+            font-size: 2rem;
+        }
 
         .data-section {
             background: var(--bg-card);
@@ -280,7 +304,6 @@
             <input type="password" class="login-input" id="passwordInput" placeholder="비밀번호 입력" onkeypress="handleLoginKeypress(event)">
             <button class="login-btn" onclick="login()">로그인</button>
             <p class="login-error" id="loginError">비밀번호가 틀렸습니다.</p>
-            <p style="margin-top: 1rem; font-size: 0.75rem; color: var(--text-secondary);">기본 비밀번호: admin123</p>
         </div>
     </div>
 
@@ -343,13 +366,18 @@
                 <div class="form-group"><label class="form-label">상품명 *</label><input type="text" class="form-input" id="inputName" placeholder="예: 에어프라이어 추천 1위"></div>
                 <div class="form-group"><label class="form-label">설명</label><input type="text" class="form-input" id="inputDesc" placeholder="예: 6.5L 대용량, 터치스크린"></div>
                 <div class="form-group"><label class="form-label">쿠팡 링크 *</label><input type="url" class="form-input" id="inputLink" placeholder="https://link.coupang.com/..."></div>
-                <div class="form-row">
-                    <div class="form-group"><label class="form-label">이모지</label><input type="text" class="form-input" id="inputEmoji" placeholder="📦" maxlength="4"></div>
-                    <div class="form-group"><label class="form-label">카테고리</label><select class="form-select" id="inputCategory"></select></div>
+                <div class="form-group">
+                    <label class="form-label">이모지 또는 이미지URL</label>
+                    <input type="text" class="form-input" id="inputImage" placeholder="🍗 또는 https://이미지주소..." oninput="updateImagePreview()">
+                    <p class="form-hint">이모지 입력 또는 이미지 URL 붙여넣기</p>
+                    <div class="image-preview" id="imagePreview"><span class="emoji">📦</span></div>
                 </div>
                 <div class="form-row">
+                    <div class="form-group"><label class="form-label">카테고리</label><select class="form-select" id="inputCategory"></select></div>
                     <div class="form-group"><label class="form-label">순서</label><input type="number" class="form-input" id="inputOrder" value="1" min="1"></div>
-                    <div class="form-group"><label class="form-label">&nbsp;</label><div class="form-checkbox"><input type="checkbox" id="inputActive" checked><label for="inputActive">노출 ON</label></div></div>
+                </div>
+                <div class="form-group">
+                    <div class="form-checkbox"><input type="checkbox" id="inputActive" checked><label for="inputActive">노출 ON</label></div>
                 </div>
             </div>
             <div class="modal-footer">
@@ -421,6 +449,10 @@
             document.getElementById('statCategories').textContent = productsData.categories.length - 1;
         }
 
+        function isImageUrl(str) {
+            return str && (str.startsWith('http://') || str.startsWith('https://'));
+        }
+
         function renderProducts() {
             const clicks = JSON.parse(localStorage.getItem(CLICKS_KEY) || '{}');
             const tbody = document.getElementById('productTableBody');
@@ -430,16 +462,20 @@
                 return;
             }
 
-            tbody.innerHTML = productsData.products.sort((a, b) => a.order - b.order).map(product => 
-                '<tr>' +
-                '<td class="product-emoji-cell">' + (product.image || '📦') + '</td>' +
+            tbody.innerHTML = productsData.products.sort((a, b) => a.order - b.order).map(product => {
+                const imageContent = isImageUrl(product.image) 
+                    ? '<img src="' + product.image + '" alt="' + product.name + '">'
+                    : '<span class="emoji">' + (product.image || '📦') + '</span>';
+                
+                return '<tr>' +
+                '<td class="product-image-cell">' + imageContent + '</td>' +
                 '<td><div class="product-name-cell">' + product.name + '</div><div class="product-desc-cell">' + (product.description || '') + '</div></td>' +
                 '<td>' + product.category + '</td>' +
                 '<td><span class="status-badge ' + (product.active ? 'status-active' : 'status-inactive') + '">' + (product.active ? 'ON' : 'OFF') + '</span></td>' +
                 '<td>' + (clicks[product.id] || 0) + '</td>' +
                 '<td><div class="action-btns"><button class="btn btn-secondary btn-sm" onclick="editProduct(' + product.id + ')">수정</button><button class="btn btn-danger btn-sm" onclick="deleteProduct(' + product.id + ')">삭제</button></div></td>' +
-                '</tr>'
-            ).join('');
+                '</tr>';
+            }).join('');
         }
 
         function renderCategories() {
@@ -474,16 +510,28 @@
             showToast('카테고리가 삭제되었습니다');
         }
 
+        function updateImagePreview() {
+            const input = document.getElementById('inputImage').value.trim();
+            const preview = document.getElementById('imagePreview');
+            
+            if (isImageUrl(input)) {
+                preview.innerHTML = '<img src="' + input + '" alt="미리보기">';
+            } else {
+                preview.innerHTML = '<span class="emoji">' + (input || '📦') + '</span>';
+            }
+        }
+
         function openAddModal() {
             document.getElementById('modalTitle').textContent = '상품 추가';
             document.getElementById('editProductId').value = '';
             document.getElementById('inputName').value = '';
             document.getElementById('inputDesc').value = '';
             document.getElementById('inputLink').value = '';
-            document.getElementById('inputEmoji').value = '📦';
+            document.getElementById('inputImage').value = '📦';
             document.getElementById('inputCategory').value = productsData.categories[1] || '';
             document.getElementById('inputOrder').value = productsData.products.length + 1;
             document.getElementById('inputActive').checked = true;
+            updateImagePreview();
             document.getElementById('productModal').classList.add('active');
         }
 
@@ -495,10 +543,11 @@
             document.getElementById('inputName').value = product.name;
             document.getElementById('inputDesc').value = product.description || '';
             document.getElementById('inputLink').value = product.link;
-            document.getElementById('inputEmoji').value = product.image || '📦';
+            document.getElementById('inputImage').value = product.image || '📦';
             document.getElementById('inputCategory').value = product.category;
             document.getElementById('inputOrder').value = product.order;
             document.getElementById('inputActive').checked = product.active;
+            updateImagePreview();
             document.getElementById('productModal').classList.add('active');
         }
 
@@ -514,7 +563,7 @@
                 name: name,
                 description: document.getElementById('inputDesc').value.trim(),
                 link: link,
-                image: document.getElementById('inputEmoji').value || '📦',
+                image: document.getElementById('inputImage').value.trim() || '📦',
                 category: document.getElementById('inputCategory').value,
                 order: parseInt(document.getElementById('inputOrder').value) || 1,
                 active: document.getElementById('inputActive').checked
