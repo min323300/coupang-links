@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>추천 상품 모음 | 직접 써보고 고른 제품들</title>
+    <meta name="description" content="실사용 기준으로 직접 고른 추천 상품들입니다.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #FF6B35;
+            --primary-dark: #E85A2A;
+            --secondary: #004E89;
+            --bg-main: #FAFAFA;
+            --bg-card: #FFFFFF;
+            --text-primary: #1A1A2E;
+            --text-secondary: #6B7280;
+            --border: #E5E7EB;
+            --shadow: 0 4px 20px rgba(0,0,0,0.08);
+            --shadow-hover: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-main);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.3; }
+        }
+
+        .header-content { position: relative; z-index: 1; }
+        .header h1 { font-size: 1.8rem; font-weight: 900; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
+        .header-subtitle { font-size: 0.95rem; opacity: 0.95; font-weight: 400; }
+
+        .trust-badges { display: flex; justify-content: center; gap: 1rem; margin-top: 1.2rem; flex-wrap: wrap; }
+        .badge { background: rgba(255,255,255,0.2); padding: 0.4rem 0.8rem; border-radius: 50px; font-size: 0.8rem; backdrop-filter: blur(10px); }
+
+        .category-filter {
+            padding: 1rem;
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            overflow-x: auto;
+        }
+
+        .category-list { display: flex; gap: 0.5rem; justify-content: flex-start; max-width: 600px; margin: 0 auto; }
+
+        .category-btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            background: var(--bg-main);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            font-family: inherit;
+        }
+
+        .category-btn:hover { background: var(--border); }
+        .category-btn.active { background: var(--primary); color: white; }
+
+        .container { max-width: 600px; margin: 0 auto; padding: 1rem; }
+        .product-list { display: flex; flex-direction: column; gap: 1rem; }
+
+        .product-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.5s ease forwards;
+            opacity: 0;
+        }
+
+        .product-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .product-link {
+            display: flex;
+            align-items: center;
+            padding: 1.2rem;
+            text-decoration: none;
+            color: inherit;
+            gap: 1rem;
+        }
+
+        .product-emoji {
+            width: 60px; height: 60px;
+            background: linear-gradient(135deg, #FFF5F0 0%, #FFE8DE 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            flex-shrink: 0;
+        }
+
+        .product-info { flex: 1; min-width: 0; }
+        .product-name { font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem; line-height: 1.4; }
+        .product-desc { font-size: 0.85rem; color: var(--text-secondary); }
+        .product-category { font-size: 0.7rem; color: var(--primary); background: #FFF0EB; padding: 0.2rem 0.5rem; border-radius: 4px; margin-top: 0.4rem; display: inline-block; }
+        .product-arrow { color: var(--text-secondary); font-size: 1.2rem; transition: transform 0.2s ease; }
+        .product-card:hover .product-arrow { transform: translateX(4px); color: var(--primary); }
+
+        .footer {
+            margin-top: 2rem;
+            padding: 2rem 1rem;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            background: var(--bg-card);
+        }
+
+        .coupang-notice {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 1rem;
+            background: #F9FAFB;
+            border-radius: 8px;
+        }
+
+        .footer-info { margin-top: 1rem; font-size: 0.75rem; color: #9CA3AF; }
+        .empty-state { text-align: center; padding: 3rem 1rem; color: var(--text-secondary); }
+        .empty-state-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .loading { text-align: center; padding: 3rem; }
+        .loading-spinner { width: 40px; height: 40px; border: 3px solid var(--border); border-top-color: var(--primary); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .product-count { text-align: center; font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem; }
+
+        @media (min-width: 640px) {
+            .header h1 { font-size: 2.2rem; }
+            .container { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1>✨ 추천 상품 모음</h1>
+            <p class="header-subtitle">실사용 기준으로 직접 고른 제품들</p>
+            <div class="trust-badges">
+                <span class="badge">✅ 직접 사용</span>
+                <span class="badge">✅ 가성비 검증</span>
+                <span class="badge">✅ 솔직 후기</span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="category-filter">
+        <div class="category-list" id="categoryList"></div>
+    </nav>
+
+    <main class="container">
+        <p class="product-count" id="productCount"></p>
+        <div class="product-list" id="productList">
+            <div class="loading">
+                <div class="loading-spinner"></div>
+                <p style="margin-top: 1rem; color: var(--text-secondary);">상품을 불러오는 중...</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="coupang-notice">
+            이 페이지는 쿠팡 파트너스 활동의 일환으로,<br>
+            이에 따른 일정액의 수수료를 제공받을 수 있습니다.
+        </div>
+        <p class="footer-info">© 2025 추천 상품 모음 | 마지막 업데이트: <span id="lastUpdated">-</span></p>
+    </footer>
+
+    <script>
+        let productsData = null;
+        let currentCategory = '전체';
+
+        async function loadProducts() {
+            try {
+                const localData = localStorage.getItem('coupang_products');
+                if (localData) {
+                    productsData = JSON.parse(localData);
+                } else {
+                    const response = await fetch('./data/products.json');
+                    productsData = await response.json();
+                }
+                renderCategories();
+                renderProducts();
+                updateLastUpdated();
+            } catch (error) {
+                console.error('Failed to load products:', error);
+                document.getElementById('productList').innerHTML = '<div class="empty-state"><div class="empty-state-icon">😅</div><p>상품을 불러올 수 없습니다.</p></div>';
+            }
+        }
+
+        function renderCategories() {
+            const categoryList = document.getElementById('categoryList');
+            categoryList.innerHTML = productsData.categories.map(cat => 
+                '<button class="category-btn ' + (cat === currentCategory ? 'active' : '') + '" onclick="filterCategory(\'' + cat + '\')">' + cat + '</button>'
+            ).join('');
+        }
+
+        function filterCategory(category) {
+            currentCategory = category;
+            renderCategories();
+            renderProducts();
+        }
+
+        function renderProducts() {
+            const productList = document.getElementById('productList');
+            const productCount = document.getElementById('productCount');
+            
+            let filtered = productsData.products.filter(p => p.active);
+            if (currentCategory !== '전체') {
+                filtered = filtered.filter(p => p.category === currentCategory);
+            }
+            filtered.sort((a, b) => a.order - b.order);
+            
+            productCount.textContent = '총 ' + filtered.length + '개 상품';
+
+            if (filtered.length === 0) {
+                productList.innerHTML = '<div class="empty-state"><div class="empty-state-icon">📦</div><p>해당 카테고리에 상품이 없습니다.</p></div>';
+                return;
+            }
+
+            productList.innerHTML = filtered.map((product, index) => 
+                '<article class="product-card" style="animation-delay: ' + (index * 0.1) + 's">' +
+                '<a href="' + product.link + '" target="_blank" rel="noopener" class="product-link" onclick="trackClick(' + product.id + ')">' +
+                '<div class="product-emoji">' + (product.image || '📦') + '</div>' +
+                '<div class="product-info">' +
+                '<h2 class="product-name">' + product.name + '</h2>' +
+                '<p class="product-desc">' + product.description + '</p>' +
+                '<span class="product-category">' + product.category + '</span>' +
+                '</div>' +
+                '<span class="product-arrow">→</span>' +
+                '</a></article>'
+            ).join('');
+        }
+
+        function trackClick(productId) {
+            const clicks = JSON.parse(localStorage.getItem('coupang_clicks') || '{}');
+            clicks[productId] = (clicks[productId] || 0) + 1;
+            clicks.total = (clicks.total || 0) + 1;
+            localStorage.setItem('coupang_clicks', JSON.stringify(clicks));
+        }
+
+        function updateLastUpdated() {
+            document.getElementById('lastUpdated').textContent = productsData.lastUpdated || '-';
+        }
+
+        document.addEventListener('DOMContentLoaded', loadProducts);
+    </script>
+</body>
+</html>
