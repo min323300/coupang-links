@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관리자 페이지 | 쿠팡 링크 관리</title>
+    <meta name="robots" content="noindex, nofollow">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #4F46E5;
+            --primary-dark: #4338CA;
+            --success: #10B981;
+            --danger: #EF4444;
+            --warning: #F59E0B;
+            --bg-main: #F3F4F6;
+            --bg-card: #FFFFFF;
+            --text-primary: #1F2937;
+            --text-secondary: #6B7280;
+            --border: #E5E7EB;
+            --shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Noto Sans KR', -apple-system, sans-serif;
+            background: var(--bg-main);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .login-screen {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 1rem;
+        }
+
+        .login-box {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            width: 100%;
+            max-width: 360px;
+            text-align: center;
+        }
+
+        .login-box h1 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .login-box p { color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.9rem; }
+
+        .login-input {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            text-align: center;
+            margin-bottom: 1rem;
+            transition: border-color 0.2s;
+        }
+
+        .login-input:focus { outline: none; border-color: var(--primary); }
+
+        .login-btn {
+            width: 100%;
+            padding: 0.8rem;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-family: inherit;
+        }
+
+        .login-btn:hover { background: var(--primary-dark); }
+        .login-error { color: var(--danger); font-size: 0.85rem; margin-top: 0.5rem; display: none; }
+
+        .admin-container { display: none; max-width: 800px; margin: 0 auto; padding: 1rem; }
+
+        .admin-header {
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .admin-header h1 { font-size: 1.3rem; }
+        .header-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            padding: 1.2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .stat-value { font-size: 1.8rem; font-weight: 700; color: var(--primary); }
+        .stat-label { font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.25rem; }
+
+        .btn {
+            padding: 0.6rem 1rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            text-decoration: none;
+        }
+
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-primary:hover { background: var(--primary-dark); }
+        .btn-success { background: var(--success); color: white; }
+        .btn-danger { background: var(--danger); color: white; }
+        .btn-secondary { background: var(--bg-main); color: var(--text-primary); border: 1px solid var(--border); }
+        .btn-secondary:hover { background: var(--border); }
+        .btn-sm { padding: 0.4rem 0.6rem; font-size: 0.8rem; }
+
+        .product-section {
+            background: var(--bg-card);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-header {
+            padding: 1rem 1.2rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-header h2 { font-size: 1.1rem; }
+
+        .product-table { width: 100%; border-collapse: collapse; }
+        .product-table th, .product-table td { padding: 0.8rem 1rem; text-align: left; border-bottom: 1px solid var(--border); }
+        .product-table th { background: #F9FAFB; font-weight: 600; font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; }
+        .product-table tr:last-child td { border-bottom: none; }
+        .product-table tr:hover { background: #FAFAFA; }
+        .product-emoji-cell { font-size: 1.5rem; text-align: center; width: 50px; }
+        .product-name-cell { font-weight: 600; }
+        .product-desc-cell { color: var(--text-secondary); font-size: 0.85rem; }
+
+        .status-badge { padding: 0.2rem 0.6rem; border-radius: 50px; font-size: 0.75rem; font-weight: 600; }
+        .status-active { background: #D1FAE5; color: #065F46; }
+        .status-inactive { background: #FEE2E2; color: #991B1B; }
+        .action-btns { display: flex; gap: 0.3rem; }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .modal-overlay.active { display: flex; }
+
+        .modal {
+            background: var(--bg-card);
+            border-radius: 16px;
+            width: 100%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            padding: 1.2rem 1.5rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h3 { font-size: 1.1rem; }
+        .modal-close { background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-secondary); line-height: 1; }
+        .modal-body { padding: 1.5rem; }
+        .form-group { margin-bottom: 1rem; }
+        .form-label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.4rem; color: var(--text-primary); }
+
+        .form-input, .form-select, .form-textarea {
+            width: 100%;
+            padding: 0.7rem 0.9rem;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            transition: border-color 0.2s;
+        }
+
+        .form-input:focus, .form-select:focus, .form-textarea:focus { outline: none; border-color: var(--primary); }
+        .form-textarea { resize: vertical; min-height: 80px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .form-checkbox { display: flex; align-items: center; gap: 0.5rem; }
+        .form-checkbox input { width: 18px; height: 18px; }
+        .modal-footer { padding: 1rem 1.5rem; border-top: 1px solid var(--border); display: flex; justify-content: flex-end; gap: 0.5rem; }
+
+        .data-section {
+            background: var(--bg-card);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            padding: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .data-section h3 { font-size: 1rem; margin-bottom: 1rem; }
+        .data-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+        .data-note { margin-top: 1rem; font-size: 0.8rem; color: var(--text-secondary); padding: 0.8rem; background: #FEF3C7; border-radius: 8px; }
+
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--text-primary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            z-index: 2000;
+            animation: slideUp 0.3s ease;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateX(-50%) translateY(20px); }
+            to { opacity: 1; transform: translateX(-50%) translateY(0); }
+        }
+
+        .category-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
+        .category-tag { background: var(--bg-main); padding: 0.3rem 0.8rem; border-radius: 50px; font-size: 0.8rem; display: flex; align-items: center; gap: 0.3rem; }
+        .category-tag button { background: none; border: none; color: var(--danger); cursor: pointer; font-size: 1rem; line-height: 1; }
+
+        @media (max-width: 640px) {
+            .product-table { display: block; overflow-x: auto; }
+            .form-row { grid-template-columns: 1fr; }
+            .admin-header { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-screen" id="loginScreen">
+        <div class="login-box">
+            <h1>🔐 관리자 로그인</h1>
+            <p>쿠팡 링크 관리 페이지입니다</p>
+            <input type="password" class="login-input" id="passwordInput" placeholder="비밀번호 입력" onkeypress="handleLoginKeypress(event)">
+            <button class="login-btn" onclick="login()">로그인</button>
+            <p class="login-error" id="loginError">비밀번호가 틀렸습니다.</p>
+            <p style="margin-top: 1rem; font-size: 0.75rem; color: var(--text-secondary);">기본 비밀번호: admin123</p>
+        </div>
+    </div>
+
+    <div class="admin-container" id="adminContainer">
+        <header class="admin-header">
+            <h1>📊 쿠팡 링크 관리자</h1>
+            <div class="header-actions">
+                <a href="../index.html" target="_blank" class="btn btn-secondary">👀 미리보기</a>
+                <button class="btn btn-secondary" onclick="logout()">로그아웃</button>
+            </div>
+        </header>
+
+        <div class="stats-grid">
+            <div class="stat-card"><div class="stat-value" id="statTotal">0</div><div class="stat-label">전체 상품</div></div>
+            <div class="stat-card"><div class="stat-value" id="statActive">0</div><div class="stat-label">노출 중</div></div>
+            <div class="stat-card"><div class="stat-value" id="statClicks">0</div><div class="stat-label">총 클릭수</div></div>
+            <div class="stat-card"><div class="stat-value" id="statCategories">0</div><div class="stat-label">카테고리</div></div>
+        </div>
+
+        <div class="product-section">
+            <div class="section-header">
+                <h2>📦 상품 목록</h2>
+                <button class="btn btn-primary" onclick="openAddModal()">+ 상품 추가</button>
+            </div>
+            <table class="product-table">
+                <thead><tr><th></th><th>상품명</th><th>카테고리</th><th>상태</th><th>클릭</th><th>관리</th></tr></thead>
+                <tbody id="productTableBody"></tbody>
+            </table>
+        </div>
+
+        <div class="data-section">
+            <h3>📁 카테고리 관리</h3>
+            <div style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
+                <input type="text" class="form-input" id="newCategoryInput" placeholder="새 카테고리명" style="flex: 1;">
+                <button class="btn btn-primary" onclick="addCategory()">추가</button>
+            </div>
+            <div class="category-tags" id="categoryTags"></div>
+        </div>
+
+        <div class="data-section">
+            <h3>💾 데이터 관리</h3>
+            <div class="data-actions">
+                <button class="btn btn-success" onclick="exportData()">📤 JSON 내보내기</button>
+                <button class="btn btn-secondary" onclick="document.getElementById('importFile').click()">📥 JSON 가져오기</button>
+                <input type="file" id="importFile" accept=".json" style="display: none;" onchange="importData(event)">
+                <button class="btn btn-danger" onclick="resetClicks()">🔄 클릭수 초기화</button>
+            </div>
+            <div class="data-note">💡 <strong>GitHub 배포 시:</strong> JSON 내보내기 → products.json 파일로 교체 → Push</div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="productModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 id="modalTitle">상품 추가</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="editProductId">
+                <div class="form-group"><label class="form-label">상품명 *</label><input type="text" class="form-input" id="inputName" placeholder="예: 에어프라이어 추천 1위"></div>
+                <div class="form-group"><label class="form-label">설명</label><input type="text" class="form-input" id="inputDesc" placeholder="예: 6.5L 대용량, 터치스크린"></div>
+                <div class="form-group"><label class="form-label">쿠팡 링크 *</label><input type="url" class="form-input" id="inputLink" placeholder="https://link.coupang.com/..."></div>
+                <div class="form-row">
+                    <div class="form-group"><label class="form-label">이모지</label><input type="text" class="form-input" id="inputEmoji" placeholder="📦" maxlength="4"></div>
+                    <div class="form-group"><label class="form-label">카테고리</label><select class="form-select" id="inputCategory"></select></div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group"><label class="form-label">순서</label><input type="number" class="form-input" id="inputOrder" value="1" min="1"></div>
+                    <div class="form-group"><label class="form-label">&nbsp;</label><div class="form-checkbox"><input type="checkbox" id="inputActive" checked><label for="inputActive">노출 ON</label></div></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeModal()">취소</button>
+                <button class="btn btn-primary" onclick="saveProduct()">저장</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const ADMIN_PASSWORD = 'admin123';
+        const STORAGE_KEY = 'coupang_products';
+        const CLICKS_KEY = 'coupang_clicks';
+        let productsData = null;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            if (sessionStorage.getItem('admin_logged_in') === 'true') showAdmin();
+        });
+
+        function login() {
+            const password = document.getElementById('passwordInput').value;
+            if (password === ADMIN_PASSWORD) {
+                sessionStorage.setItem('admin_logged_in', 'true');
+                showAdmin();
+            } else {
+                document.getElementById('loginError').style.display = 'block';
+            }
+        }
+
+        function handleLoginKeypress(e) { if (e.key === 'Enter') login(); }
+        function logout() { sessionStorage.removeItem('admin_logged_in'); location.reload(); }
+
+        function showAdmin() {
+            document.getElementById('loginScreen').style.display = 'none';
+            document.getElementById('adminContainer').style.display = 'block';
+            loadData();
+        }
+
+        async function loadData() {
+            try {
+                const localData = localStorage.getItem(STORAGE_KEY);
+                if (localData) {
+                    productsData = JSON.parse(localData);
+                } else {
+                    const response = await fetch('../data/products.json');
+                    productsData = await response.json();
+                    saveToLocalStorage();
+                }
+                renderAll();
+            } catch (error) {
+                productsData = { lastUpdated: new Date().toISOString().split('T')[0], products: [], categories: ['전체', '주방', '생활', 'IT', '뷰티', '육아', '식품'] };
+                saveToLocalStorage();
+                renderAll();
+            }
+        }
+
+        function saveToLocalStorage() {
+            productsData.lastUpdated = new Date().toISOString().split('T')[0];
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(productsData));
+        }
+
+        function renderAll() { renderStats(); renderProducts(); renderCategories(); renderCategorySelect(); }
+
+        function renderStats() {
+            const clicks = JSON.parse(localStorage.getItem(CLICKS_KEY) || '{}');
+            document.getElementById('statTotal').textContent = productsData.products.length;
+            document.getElementById('statActive').textContent = productsData.products.filter(p => p.active).length;
+            document.getElementById('statClicks').textContent = clicks.total || 0;
+            document.getElementById('statCategories').textContent = productsData.categories.length - 1;
+        }
+
+        function renderProducts() {
+            const clicks = JSON.parse(localStorage.getItem(CLICKS_KEY) || '{}');
+            const tbody = document.getElementById('productTableBody');
+            
+            if (productsData.products.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="6" style="text-align: center; padding: 2rem; color: var(--text-secondary);">상품이 없습니다. + 상품 추가 버튼을 클릭하세요.</td></tr>';
+                return;
+            }
+
+            tbody.innerHTML = productsData.products.sort((a, b) => a.order - b.order).map(product => 
+                '<tr>' +
+                '<td class="product-emoji-cell">' + (product.image || '📦') + '</td>' +
+                '<td><div class="product-name-cell">' + product.name + '</div><div class="product-desc-cell">' + (product.description || '') + '</div></td>' +
+                '<td>' + product.category + '</td>' +
+                '<td><span class="status-badge ' + (product.active ? 'status-active' : 'status-inactive') + '">' + (product.active ? 'ON' : 'OFF') + '</span></td>' +
+                '<td>' + (clicks[product.id] || 0) + '</td>' +
+                '<td><div class="action-btns"><button class="btn btn-secondary btn-sm" onclick="editProduct(' + product.id + ')">수정</button><button class="btn btn-danger btn-sm" onclick="deleteProduct(' + product.id + ')">삭제</button></div></td>' +
+                '</tr>'
+            ).join('');
+        }
+
+        function renderCategories() {
+            const tags = document.getElementById('categoryTags');
+            tags.innerHTML = productsData.categories.filter(cat => cat !== '전체').map(cat => 
+                '<span class="category-tag">' + cat + '<button onclick="removeCategory(\'' + cat + '\')">&times;</button></span>'
+            ).join('');
+        }
+
+        function renderCategorySelect() {
+            const select = document.getElementById('inputCategory');
+            select.innerHTML = productsData.categories.filter(cat => cat !== '전체').map(cat => '<option value="' + cat + '">' + cat + '</option>').join('');
+        }
+
+        function addCategory() {
+            const input = document.getElementById('newCategoryInput');
+            const name = input.value.trim();
+            if (!name) return;
+            if (productsData.categories.includes(name)) { showToast('이미 있는 카테고리입니다'); return; }
+            productsData.categories.push(name);
+            saveToLocalStorage();
+            renderAll();
+            input.value = '';
+            showToast('카테고리가 추가되었습니다');
+        }
+
+        function removeCategory(name) {
+            if (!confirm('"' + name + '" 카테고리를 삭제하시겠습니까?')) return;
+            productsData.categories = productsData.categories.filter(cat => cat !== name);
+            saveToLocalStorage();
+            renderAll();
+            showToast('카테고리가 삭제되었습니다');
+        }
+
+        function openAddModal() {
+            document.getElementById('modalTitle').textContent = '상품 추가';
+            document.getElementById('editProductId').value = '';
+            document.getElementById('inputName').value = '';
+            document.getElementById('inputDesc').value = '';
+            document.getElementById('inputLink').value = '';
+            document.getElementById('inputEmoji').value = '📦';
+            document.getElementById('inputCategory').value = productsData.categories[1] || '';
+            document.getElementById('inputOrder').value = productsData.products.length + 1;
+            document.getElementById('inputActive').checked = true;
+            document.getElementById('productModal').classList.add('active');
+        }
+
+        function editProduct(id) {
+            const product = productsData.products.find(p => p.id === id);
+            if (!product) return;
+            document.getElementById('modalTitle').textContent = '상품 수정';
+            document.getElementById('editProductId').value = id;
+            document.getElementById('inputName').value = product.name;
+            document.getElementById('inputDesc').value = product.description || '';
+            document.getElementById('inputLink').value = product.link;
+            document.getElementById('inputEmoji').value = product.image || '📦';
+            document.getElementById('inputCategory').value = product.category;
+            document.getElementById('inputOrder').value = product.order;
+            document.getElementById('inputActive').checked = product.active;
+            document.getElementById('productModal').classList.add('active');
+        }
+
+        function closeModal() { document.getElementById('productModal').classList.remove('active'); }
+
+        function saveProduct() {
+            const name = document.getElementById('inputName').value.trim();
+            const link = document.getElementById('inputLink').value.trim();
+            if (!name || !link) { showToast('상품명과 링크는 필수입니다'); return; }
+
+            const editId = document.getElementById('editProductId').value;
+            const productData = {
+                name: name,
+                description: document.getElementById('inputDesc').value.trim(),
+                link: link,
+                image: document.getElementById('inputEmoji').value || '📦',
+                category: document.getElementById('inputCategory').value,
+                order: parseInt(document.getElementById('inputOrder').value) || 1,
+                active: document.getElementById('inputActive').checked
+            };
+
+            if (editId) {
+                const index = productsData.products.findIndex(p => p.id === parseInt(editId));
+                if (index !== -1) productsData.products[index] = { ...productsData.products[index], ...productData };
+                showToast('상품이 수정되었습니다');
+            } else {
+                const maxId = Math.max(0, ...productsData.products.map(p => p.id));
+                productData.id = maxId + 1;
+                productsData.products.push(productData);
+                showToast('상품이 추가되었습니다');
+            }
+
+            saveToLocalStorage();
+            renderAll();
+            closeModal();
+        }
+
+        function deleteProduct(id) {
+            if (!confirm('정말 삭제하시겠습니까?')) return;
+            productsData.products = productsData.products.filter(p => p.id !== id);
+            saveToLocalStorage();
+            renderAll();
+            showToast('상품이 삭제되었습니다');
+        }
+
+        function exportData() {
+            const dataStr = JSON.stringify(productsData, null, 2);
+            const blob = new Blob([dataStr], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'products.json';
+            a.click();
+            URL.revokeObjectURL(url);
+            showToast('JSON 파일이 다운로드됩니다');
+        }
+
+        function importData(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                try {
+                    const imported = JSON.parse(e.target.result);
+                    if (imported.products && imported.categories) {
+                        productsData = imported;
+                        saveToLocalStorage();
+                        renderAll();
+                        showToast('데이터를 가져왔습니다');
+                    } else { throw new Error('Invalid format'); }
+                } catch (error) { showToast('올바른 JSON 형식이 아닙니다'); }
+            };
+            reader.readAsText(file);
+            event.target.value = '';
+        }
+
+        function resetClicks() {
+            if (!confirm('모든 클릭수를 초기화하시겠습니까?')) return;
+            localStorage.removeItem(CLICKS_KEY);
+            renderStats();
+            renderProducts();
+            showToast('클릭수가 초기화되었습니다');
+        }
+
+        function showToast(message) {
+            const existing = document.querySelector('.toast');
+            if (existing) existing.remove();
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 2500);
+        }
+    </script>
+</body>
+</html>
