@@ -1,0 +1,16 @@
+{
+  "lastUpdated": "2025-01-13",
+  "products": [
+    {
+      "id": 1,
+      "name": "더바른닭 국내산 닭가슴살",
+      "description": "신선한 국내산 닭가슴살",
+      "category": "식품",
+      "link": "https://link.coupang.com/a/dq7rDh",
+      "image": "🍗",
+      "active": true,
+      "order": 1
+    }
+  ],
+  "categories": ["전체", "주방", "생활", "IT", "뷰티", "육아", "식품"]
+}
