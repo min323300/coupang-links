@@ -122,15 +122,23 @@
             gap: 1rem;
         }
 
-        .product-emoji {
-            width: 60px; height: 60px;
+        .product-image {
+            width: 70px; height: 70px;
             background: linear-gradient(135deg, #FFF5F0 0%, #FFE8DE 100%);
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.8rem;
+            font-size: 2rem;
             flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
         }
 
         .product-info { flex: 1; min-width: 0; }
@@ -243,6 +251,10 @@
             renderProducts();
         }
 
+        function isImageUrl(str) {
+            return str && (str.startsWith('http://') || str.startsWith('https://'));
+        }
+
         function renderProducts() {
             const productList = document.getElementById('productList');
             const productCount = document.getElementById('productCount');
@@ -260,18 +272,22 @@
                 return;
             }
 
-            productList.innerHTML = filtered.map((product, index) => 
-                '<article class="product-card" style="animation-delay: ' + (index * 0.1) + 's">' +
+            productList.innerHTML = filtered.map((product, index) => {
+                const imageContent = isImageUrl(product.image) 
+                    ? '<img src="' + product.image + '" alt="' + product.name + '">'
+                    : (product.image || '📦');
+                
+                return '<article class="product-card" style="animation-delay: ' + (index * 0.1) + 's">' +
                 '<a href="' + product.link + '" target="_blank" rel="noopener" class="product-link" onclick="trackClick(' + product.id + ')">' +
-                '<div class="product-emoji">' + (product.image || '📦') + '</div>' +
+                '<div class="product-image">' + imageContent + '</div>' +
                 '<div class="product-info">' +
                 '<h2 class="product-name">' + product.name + '</h2>' +
                 '<p class="product-desc">' + product.description + '</p>' +
                 '<span class="product-category">' + product.category + '</span>' +
                 '</div>' +
                 '<span class="product-arrow">→</span>' +
-                '</a></article>'
-            ).join('');
+                '</a></article>';
+            }).join('');
         }
 
         function trackClick(productId) {
