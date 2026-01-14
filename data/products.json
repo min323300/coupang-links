@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-13",
+  "lastUpdated": "2026-01-14",
   "products": [
     {
       "name": "액체세제 빨래세제",
@@ -36,7 +36,7 @@
       "description": "소비기한(또는 유통기한): 2026-07-25 이거나 그 이후인 상품 카페인 유형: 카페인 맛/향: 아메리카노/블랙 종류: 커피믹스 총 수량: 200개 쿠팡상품번호: 8548534914 - 24639547867",
       "link": "https://link.coupang.com/a/drd1nG",
       "image": "https://t5c.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/3ea0/ff2ccddf9849355d1a8172ed9c56c6dbe60dab8d3fd19af9c48c115b9e82.jpg",
-      "category": "식품",
+      "category": "레토르트",
       "order": 5,
       "active": true,
       "id": 5
@@ -110,16 +110,307 @@
       "order": 11,
       "active": true,
       "id": 13
+    },
+    {
+      "name": "참기름·들기름 같은 식재료 선물",
+      "description": "✔ 과한 포장보다는 깔끔함  ✔ 집에서 실제로 잘 쓰이는 구성  ✔ 부담 없는 가격대",
+      "link": "https://blog.naver.com/hypo3300/224141575047",
+      "image": "https://postfiles.pstatic.net/MjAyNjAxMTBfMTc0/MDAxNzY4MDE5ODExNzAy.nGM8P3H9dNRqRulUAKn5qCZYZC0QTUHyvJ5PMDfOsNwg.hJJbXKNuqScrW8mZ-nzhTtXp__znk3WxxakKBCc6eVIg.PNG/ChatGPT_Image_2026%EB%85%84_1%EC%9B%94_10%EC%9D%BC_%EC%98%A4%ED%9B%84_12_53_35.png?type=w466",
+      "category": "공동구매",
+      "order": 12,
+      "active": true,
+      "id": 14
+    },
+    {
+      "name": "스카트 하루한장 THE 버블 항균 수세미",
+      "description": "재질: 폴리프로필렌 총 수량: 80매 타입: 롤형 일회용여부: 일회용 특별한 기능: 1장씩 사용 가능 쿠팡상품번호: 7444579488 - 19850511839",
+      "link": "https://link.coupang.com/a/drMuhl",
+      "image": "https://t5c.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/249317472099777-60a5eb25-cba0-4a9e-91c6-670347d0071f.jpg",
+      "category": "생활",
+      "order": 13,
+      "active": true,
+      "id": 15
+    },
+    {
+      "name": "헤이엠30P 음식물 물빠짐 일회용 봉투 일회용봉투 물빠짐비닐봉투 음식물봉투 물빠짐봉투",
+      "description": "재질: 비닐 쿠팡상품번호: 8520285509 - 3468428469",
+      "link": "https://link.coupang.com/a/drMOCu",
+      "image": "https://t5c.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/cffd/b6f13260bf5055b3cf15945c5a74541388200b134a771f7ba94bf20773d5.jpg",
+      "category": "생활",
+      "order": 14,
+      "active": true,
+      "id": 16
+    },
+    {
+      "name": "유한락스 곰팡이제거제, 900ml, 2개",
+      "description": "제형: 액체형 용기 타입: 스프레이형 총 수량: 2개 쿠팡상품번호: 8539583585 - 24723135084",
+      "link": "https://link.coupang.com/a/drMT0z",
+      "image": "https://t3a.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/68451822244045-72d8f647-0ec9-4faf-9720-5d86b42b4d60.jpg",
+      "category": "생활",
+      "order": 15,
+      "active": true,
+      "id": 17
+    },
+    {
+      "name": "히이즈 비타올인원 화이트닝 비타민 미백 주름 기능성 기미 잡티 개선, 2개, 110ml",
+      "description": "유통기한 (사용기한 표시의무 대상 상품은 사용기한): 2027-07-21 이거나 그 이후인 상품 올인원 여부: 올인원 용기형태: 펌프형 기능성화장품 인증여부: 기능성 인증 피부고민: 미백 쿠팡상품번호: 8985030686 - 26312064289",
+      "link": "https://link.coupang.com/a/drMZlR",
+      "image": "https://thumbnail3.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/88fc/e8b73ca9f2f7d4fa4f542ff10255c465e440973a59046d30cbdd19d4d02c.jpg",
+      "category": "뷰티",
+      "order": 16,
+      "active": true,
+      "id": 18
+    },
+    {
+      "name": "[닥터방기원] 랩 샴푸RX 480ml + 트리트먼트RX 480ml + 토닉 120ml",
+      "description": "쿠팡상품번호: 8715560372 - 25618737689",
+      "link": "https://link.coupang.com/a/drM4hs",
+      "image": "https://thumbnail15.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/e935/598ecfc8cd7bd8308f2b7571994b5591f4198205785e6b179c69818f02af.jpg",
+      "category": "뷰티",
+      "order": 17,
+      "active": true,
+      "id": 19
+    },
+    {
+      "name": "닥터지 그린 마일드 업 플러스 선크림 SPF50+ PA++++, 35ml, 1개",
+      "description": "유통기한 (사용기한 표시의무 대상 상품은 사용기한): 2026-05-21 이거나 그 이후인 상품 사용대상: 여성용 제형: 크림 피부타입: 모든피부 SPF: SPF50+ 쿠팡상품번호: 1473062788 - 2531956594",
+      "link": "https://link.coupang.com/a/drM8pS",
+      "image": "https://t1c.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/711495719789444-63608ebf-36e9-49df-ba97-eba04797f78b.jpg",
+      "category": "뷰티",
+      "order": 18,
+      "active": true,
+      "id": 20
+    },
+    {
+      "name": "네이쳐바이 알로에 에센스 마스크, 50개, 1개입",
+      "description": "사용기한: 사용기한 28년1월 이후 / 개봉 후 즉시 사용 피부타입: 모든피부 개당 중량: 23g 총 수량: 50개 개당 용량: 23ml 쿠팡상품번호: 8314722995 - 12111892420",
+      "link": "https://link.coupang.com/a/drNfFJ",
+      "image": "https://t1a.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/0d00/f8a52df404600e140b5fcb8ee31e8cf572addd85dd15c2ebd2e44ff50003.jpg",
+      "category": "뷰티",
+      "order": 19,
+      "active": true,
+      "id": 21
+    },
+    {
+      "name": "[비건뷰티] 코스노리 롱 액티브 아이래쉬 세럼 속눈썹 영양제, 9g, 1개",
+      "description": "유통기한 (사용기한 표시의무 대상 상품은 사용기한): 2026-05-20 이거나 그 이후인 상품 사용대상: 여성용 색상계열: 투명 피부톤: 모든 피부 뷰티 피니쉬타입: 윤기 쿠팡상품번호: 1923522275 - 3265782060",
+      "link": "https://link.coupang.com/a/drNjQC",
+      "image": "https://thumbnail1.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/7973970146685-bf003ddd-4725-4928-b888-b56f146fb587.jpg",
+      "category": "뷰티",
+      "order": 20,
+      "active": true,
+      "id": 22
+    },
+    {
+      "name": "100%수제 견과바 7가지 통견과류가듬뿍!!42g 30개입(10개입 420g), 42g, 30개",
+      "description": "쿠팡상품번호: 8953312133 - 26191330706",
+      "link": "https://link.coupang.com/a/drNoGe",
+      "image": "https://thumbnail2.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/image_audit/prod/56916031-579b-4acc-a2a0-592255f27de4_fixing_v2.png",
+      "category": "식품",
+      "order": 21,
+      "active": true,
+      "id": 23
+    },
+    {
+      "name": "교동 사골우거지국, 500g, 5개",
+      "description": "소비기한(또는 유통기한): 2026-05-20 이거나 그 이후인 상품 탕/전골 종류: 본상품선택 국 종류: 사골/곰국 섭취방법: 즉석완조리식품 대용량상품: Y 쿠팡상품번호: 53032398 - 780335736",
+      "link": "https://link.coupang.com/a/drNvic",
+      "image": "https://t5c.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/207228498666984-420e3f19-d267-4f72-b0d1-6733590995d7.jpg",
+      "category": "레토르트",
+      "order": 22,
+      "active": true,
+      "id": 24
+    },
+    {
+      "name": "GNM자연의품격 품격있는 의성 흑마늘 진액 (1박스당 30포) 흑마늘즙, 2.4L, 2개",
+      "description": "건강식품 타입: 스틱 쿠팡상품번호: 1994258 - 11127291247",
+      "link": "https://link.coupang.com/a/drNAKf",
+      "image": "https://thumbnail12.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/4bdc/63128bdd67b1129695c1c7b10fd7af3e54aa9d868f5604895c069dcc0fd2.jpg",
+      "category": "레토르트",
+      "order": 23,
+      "active": true,
+      "id": 25
+    },
+    {
+      "name": "유기농 불릴필요없는 씻어나온 쌀",
+      "description": "생산연도: 2025 개당 중량: 2kg 유기농/친환경 등: 인증 있음 친환경 인증: 유기 쿠팡상품번호: 5195936112 - 7227180511",
+      "link": "https://link.coupang.com/a/drNGIw",
+      "image": "https://t2a.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/80968282900540-5a05fc17-5040-4043-901e-b04e246adc5a.JPG",
+      "category": "식품",
+      "order": 24,
+      "active": true,
+      "id": 26
+    },
+    {
+      "name": "한우 1등급 국거리용 (냉장), 300g, 1개",
+      "description": "소비기한(또는 유통기한): 2026-01-20 이거나 그 이후인 상품 보관방법: 냉장보관 고기 용도: 국거리 개당 중량: 300g 등급: 1등급 쿠팡상품번호: 6148833839 - 11853730359",
+      "link": "https://link.coupang.com/a/drNMqS",
+      "image": "https://thumbnail8.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/2361591260199214-83fd83b5-a49b-42ff-827b-3ed15176af21.jpg",
+      "category": "고기류",
+      "order": 25,
+      "active": true,
+      "id": 27
+    },
+    {
+      "name": "호주산 척아이롤 구이용 (냉장), 1kg, 1개",
+      "description": "소비기한(또는 유통기한): 2026-01-17 이거나 그 이후인 상품 보관방법: 냉장보관 고기 용도: 구이용 개당 중량: 1kg 부위: 척아이롤 쿠팡상품번호: 7538803732 - 19812721275",
+      "link": "https://link.coupang.com/a/drNRol",
+      "image": "https://t4c.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/79499527413190-10e41803-f596-4b6f-910f-298c0fd1291f.jpg",
+      "category": "고기류",
+      "order": 26,
+      "active": true,
+      "id": 28
+    },
+    {
+      "name": "모아미트 캐나다산 보리먹인 삼겹살 목심 반반팩 구이용 (냉장), 1개",
+      "description": "소비기한(또는 유통기한): 2026-01-19 이거나 그 이후인 상품 보관방법: 냉장보관 삼겹살 종류: 일반삼겹살 총 중량: 1kg 개당 중량: 1kg 쿠팡상품번호: 311669203 - 983682845",
+      "link": "https://link.coupang.com/a/drNVzD",
+      "image": "https://thumbnail9.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/8163612428050082-c3d1ba0e-eb92-42c8-8da1-1eaecc8a4f73.jpg",
+      "category": "고기류",
+      "order": 27,
+      "active": true,
+      "id": 29
+    },
+    {
+      "name": "한강식품 IQF 무항생제 닭가슴살 (냉동), 1kg, 1개",
+      "description": "소비기한(또는 유통기한): 2026-11-05 이거나 그 이후인 상품 보관방법: 냉동보관 유기농/친환경 등: 인증 있음 총 중량: 1kg 개당 중량: 1kg 쿠팡상품번호: 7118492748 - 17816949470",
+      "link": "https://link.coupang.com/a/drNY70",
+      "image": "https://t2c.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/1733507691057547-20b810e6-79ac-44e4-8602-e3de8abf40b2.jpg",
+      "category": "식품",
+      "order": 28,
+      "active": true,
+      "id": 30
+    },
+    {
+      "name": "셰프초이스 한돈 양념 돼지 불고기, 1kg, 1개",
+      "description": "소비기한(또는 유통기한): 2026-01-18 이거나 그 이후인 상품 보관방법: 냉장보관 개당 중량: 1kg 용기 타입: 파우치 총 중량: 1kg 쿠팡상품번호: 1863085860 - 3166935003",
+      "link": "https://link.coupang.com/a/drN2Jg",
+      "image": "https://thumbnail6.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/2020/07/13/15/7/92ab251d-c746-4b9c-afc6-9ad324e6a6ad.jpg",
+      "category": "식품",
+      "order": 29,
+      "active": true,
+      "id": 31
+    },
+    {
+      "name": "오프라이스 한촌 정통설렁탕, 500g, 10개",
+      "description": "소비기한(또는 유통기한): 2026-12-07 이거나 그 이후인 상품 탕/전골 종류: 설렁탕 찌개/장 종류: 기타 총 수량: 10개 쿠팡상품번호: 5767688009 - 22085550163",
+      "link": "https://link.coupang.com/a/drOadC",
+      "image": "https://thumbnail13.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/80ac/c0ff1561acbbb3d339a8e6e55aa8ced60b5c96730cf8f7538e4da2a81c66.jpg",
+      "category": "식품",
+      "order": 30,
+      "active": true,
+      "id": 32
+    },
+    {
+      "name": "햇반 저당잡곡밥 3종 체험세트 발아현미 흑미 오곡 구성",
+      "description": "유형: 밥 쿠팡상품번호: 8840085457 - 25762998130",
+      "link": "https://link.coupang.com/a/drOf1x",
+      "image": "https://t4c.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/image_audit/stage/manual/ad5210a757995b87912b162cd8086fd2f9d01da9be1e488f78c5ee44264a_1754988568996.png",
+      "category": "식품",
+      "order": 31,
+      "active": true,
+      "id": 33
+    },
+    {
+      "name": "곰곰 소중한 잡곡밥, 210g, 12개",
+      "description": "소비기한(또는 유통기한): 2026-09-17 이거나 그 이후인 상품 즉석밥 크기: 중간공기 즉석밥 종류: 잡곡밥 유형: 즉석조리식품 쿠팡상품번호: 7121221655 - 17830642126",
+      "link": "https://link.coupang.com/a/drOjNT",
+      "image": "https://t3c.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/5041118770660041-94fc8a81-0083-498f-80c5-6c52e505b056.jpg",
+      "category": "식품",
+      "order": 32,
+      "active": true,
+      "id": 34
+    },
+    {
+      "name": "곰곰 새우 볶음밥 (냉동), 300g, 6개",
+      "description": "소비기한(또는 유통기한): 2026-11-19 이거나 그 이후인 상품 보관방법: 냉동보관 총 중량: 1800g 전자레인지사용여부: 전자레인지사용가능 용기 타입: 파우치 쿠팡상품번호: 185917324 - 983874261",
+      "link": "https://link.coupang.com/a/drOt9x",
+      "image": "https://t4c.coupangcdn.com/thumbnails/remote/212x212ex/image/1025_amir_coupang_oct_80k/d11a/d888fc1a8172f2907da272efc342ce0d6ccafc08bd2b58208c58b3d44efd.jpg",
+      "category": "레토르트",
+      "order": 33,
+      "active": true,
+      "id": 35
+    },
+    {
+      "name": "쉐프엠 베이컨까르보나라 파스타 4인분, 230g, 4개",
+      "description": "소비기한(또는 유통기한): 2026-02-06 이거나 그 이후인 상품 보관방법: 냉장보관 총 수량: 4개 전자레인지사용여부: 전자레인지사용가능 면 종류: 기본면 쿠팡상품번호: 2010223107 - 3419925930",
+      "link": "https://link.coupang.com/a/drOxOm",
+      "image": "https://t5a.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/2977586941814999-1cd982d9-6c09-42e8-9316-284ba352fd70.jpg",
+      "category": "레토르트",
+      "order": 34,
+      "active": true,
+      "id": 36
+    },
+    {
+      "name": "오뚜기3분 카레 약간매운맛, 200g, 10개",
+      "description": "소비기한(또는 유통기한): 2026-03-06 이거나 그 이후인 상품 섭취방법: 즉석완조리식품 맛: 약간매운맛 대용량상품: Y 총 수량: 10개 쿠팡상품번호: 6640662550 - 15459944991",
+      "link": "https://link.coupang.com/a/drOBkM",
+      "image": "https://thumbnail8.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/78772363175556-4b810a30-debe-4462-8e31-bd56b62705ad.jpg",
+      "category": "레토르트",
+      "order": 35,
+      "active": true,
+      "id": 37
+    },
+    {
+      "name": "탐사 실속형 배변패드",
+      "description": "총 수량: 200개 사이즈: 일반형 흡수력: 고흡수성수지 (SAP) 포함 쿠팡상품번호: 7299719601 - 19815641903",
+      "link": "https://link.coupang.com/a/drOEq0",
+      "image": "https://t1a.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/66271985880224-454d223c-d331-40e3-8f4b-91d0739d81b0.jpg",
+      "category": "반려동물용품",
+      "order": 36,
+      "active": true,
+      "id": 38
+    },
+    {
+      "name": "제로랩스 강아지 영양가득 져키",
+      "description": "유통기한: 2026-05-07 이거나 그 이후인 상품 주원료: 혼합맛 대상연령: 전연령 식품 기능: 면역/항산화 총 중량: 3kg 쿠팡상품번호: 6457778700 - 14043221216",
+      "link": "https://link.coupang.com/a/drOJqI",
+      "image": "https://thumbnail8.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/1758819141666603-63abc803-d5ab-4182-9b4b-cc920b4261ea.jpg",
+      "category": "반려동물용품",
+      "order": 37,
+      "active": true,
+      "id": 39
+    },
+    {
+      "name": "닥터블랭크 저자극 강아지 샴푸 베이비파우더향, 500ml, 2개",
+      "description": "유통기한: 2026-11-11 이거나 그 이후인 상품 총 용량: 1L 향: 베이비파우더향 피부고민: 진정/보습 사용대상: 반려동물용 쿠팡상품번호: 7851681717 - 21402918318",
+      "link": "https://link.coupang.com/a/drOMXk",
+      "image": "https://thumbnail7.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/70714821499869-4c2d2d30-eead-4a40-b746-a051bb9f6d89.jpg",
+      "category": "반려동물용품",
+      "order": 38,
+      "active": true,
+      "id": 40
+    },
+    {
+      "name": "코코브라운 애완동물용 베이킹소다 탈취제 베이비파우더향",
+      "description": "총 용량: 1.1L 반려/애완용품 향: 베이비파우더향 특별한 기능: 유향 재질: 폴리에틸렌 테레프탈레이트 (PET) 포함 구성 요소: 본품 쿠팡상품번호: 175968 - 55814798",
+      "link": "https://link.coupang.com/a/drOP3t",
+      "image": "https://thumbnail4.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/279177958229935-97413c24-3d0f-4ec0-9f3e-71f66bbae421.jpg",
+      "category": "반려동물용품",
+      "order": 39,
+      "active": true,
+      "id": 41
+    },
+    {
+      "name": "탐사 강아지 트릿 영양제, 뼈/관절강화, 1개",
+      "description": "유통기한: 2026-08-25 이거나 그 이후인 상품 대상연령: 전연령 건강식품 타입: 캡슐 맛: 글루코사민 개당 중량: 300g 쿠팡상품번호: 194455853 - 557742205",
+      "link": "https://link.coupang.com/a/drOTmR",
+      "image": "https://t2c.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/602398423909261-db455970-13a0-43c7-9c21-e332d13bd21d.jpg",
+      "category": "반려동물용품",
+      "order": 40,
+      "active": true,
+      "id": 42
     }
   ],
   "categories": [
     "전체",
-    "주방",
     "생활",
-    "IT",
     "뷰티",
-    "육아",
     "식품",
-    "반려동물용품"
+    "반려동물용품",
+    "주방",
+    "공동구매",
+    "고기류",
+    "레토르트"
   ]
 }
