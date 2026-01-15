@@ -222,13 +222,11 @@
 
         async function loadProducts() {
             try {
-                const localData = localStorage.getItem('coupang_products');
-                if (localData) {
-                    productsData = JSON.parse(localData);
-                } else {
-                    const response = await fetch('./data/products.json');
-                    productsData = await response.json();
-                }
+                // 항상 최신 JSON을 불러오도록 수정
+                const response = await fetch('./data/products.json?v=' + Date.now());
+                productsData = await response.json();
+                // 최신 데이터로 localStorage 갱신
+                localStorage.setItem('coupang_products', JSON.stringify(productsData));
                 renderCategories();
                 renderProducts();
                 updateLastUpdated();
