@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-14",
+  "lastUpdated": "2026-01-15",
   "products": [
     {
       "name": "액체세제 빨래세제",
@@ -400,6 +400,116 @@
       "order": 40,
       "active": true,
       "id": 42
+    },
+    {
+      "name": "성심메디칼 일회용주사기 50cc 18G 25개입",
+      "description": "총 수량: 25개 쿠팡상품번호: 7787858722 - 21062690170",
+      "link": "https://link.coupang.com/a/dsxHYO",
+      "image": "https://t1a.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/4e8c/f735e26056d03670e92096fe3408eff23f8cc3b995165c28646a05024531.png",
+      "category": "의료",
+      "order": 41,
+      "active": true,
+      "id": 43
+    },
+    {
+      "name": "라피끄 강아지 유산균 1조 2천억개 품은 소프트 사료",
+      "description": "대상연령: 전연령 사료 타입: 소프트사료 입자크기: 작은(8mm미만) 총 중량: 1.2kg 대상크기: 전대상견용 쿠팡상품번호: 8710252570 - 25295395400",
+      "link": "https://link.coupang.com/a/dsxWas",
+      "image": "https://thumbnail7.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/96f9/0ed48450e11f71c8e3a6a21d5d39037480677122d4eb2b50062d948ebc6d.jpg",
+      "category": "반려동물용품",
+      "order": 42,
+      "active": true,
+      "id": 44
+    },
+    {
+      "name": "블루펫 강아지 프리미엄 논슬립 배변패드 무향 45g",
+      "description": "총 수량: 150개 사이즈: 대형 향 유무: 무향 흡수력: 고흡수성수지 (SAP) 포함 무형광여부: 무형광 쿠팡상품번호: 8444224807 - 25473826635",
+      "link": "https://link.coupang.com/a/dsx4jI",
+      "image": "https://t2a.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/2025/05/07/18/2/d10643c0-5d5a-4a01-aa17-a12e153cc2a7.jpg",
+      "category": "반려동물용품",
+      "order": 43,
+      "active": true,
+      "id": 45
+    },
+    {
+      "name": "도드람 한돈 1등급 삼겹살 구이용 (냉장), 1kg, 1개",
+      "description": "소비기한(또는 유통기한): 2026-01-21 이거나 그 이후인 상품 보관방법: 냉장보관 삼겹살 종류: 일반삼겹살 총 중량: 1kg 개당 중량: 1kg 쿠팡상품번호: 188172341 - 537362338",
+      "link": "https://link.coupang.com/a/dsyksz",
+      "image": "https://thumbnail15.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/241421083965515-3543ae71-0b1a-41c5-ac65-767c33d33fba.jpg",
+      "category": "고기류",
+      "order": 44,
+      "active": true,
+      "id": 46
+    },
+    {
+      "name": "대한곱창 곱창전골",
+      "description": "쿠팡상품번호: 9254652357 - 27376255806",
+      "link": "https://link.coupang.com/a/dsyu68",
+      "image": "https://thumbnail1.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/b6e8/f3294c0feded69f0aca7ac556c3ca2d3b0c3a178ef688a955911eb691ae0.jpg",
+      "category": "레토르트",
+      "order": 45,
+      "active": true,
+      "id": 47
+    },
+    {
+      "name": "바이아우어 블랙 비어 이스트 샴푸 앰버우드향, 1.017L, 2개",
+      "description": "유통기한 (사용기한 표시의무 대상 상품은 사용기한): 2027-05-01 이거나 그 이후인 상품 사용대상: 남녀공용 제형: 펌프 모발타입: 모든모발 향기: 앰버우드향 쿠팡상품번호: 9098774603 - 26746414726",
+      "link": "https://link.coupang.com/a/dsyyqr",
+      "image": "https://t2c.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/33140186499604-824b98df-2556-42ef-9066-bcca99900aae.jpg",
+      "category": "생활",
+      "order": 46,
+      "active": true,
+      "id": 48
+    },
+    {
+      "name": "럽센트 스크럽 바디워시 플라워마켓 화이트튤립향, 800ml, 1개",
+      "description": "유통기한 (사용기한 표시의무 대상 상품은 사용기한): 2027-06-22 이거나 그 이후인 상품 향: 꽃향 총 수량: 1개 쿠팡상품번호: 7629610794 - 27154119715",
+      "link": "https://link.coupang.com/a/dsyBhh",
+      "image": "https://thumbnail14.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/2025/11/20/11/3/97616d0f-58c5-40d5-8f8b-a3cecc84eb6b.jpg",
+      "category": "생활",
+      "order": 47,
+      "active": true,
+      "id": 49
+    },
+    {
+      "name": "프레시지 더큰 블랙라벨 스테이크 세트 2인분, 580g, 2개",
+      "description": "소비기한(또는 유통기한): 2026-01-18 이거나 그 이후인 상품 보관방법: 냉장보관 총 중량: 1160g 섭취 분량: 1~2인분 섭취방법: 신선편의식재료 쿠팡상품번호: 273882898 - 19224739722",
+      "link": "https://link.coupang.com/a/dsyHPc",
+      "image": "https://thumbnail9.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/1041293400176592-4974ddde-64e1-42de-9a16-6d14384c863b.jpg",
+      "category": "고기류",
+      "order": 48,
+      "active": true,
+      "id": 50
+    },
+    {
+      "name": "목우촌 무항생제 인증 닭다리살 정육 (냉장), 400g, 2팩",
+      "description": "소비기한(또는 유통기한): 2026-01-20 이거나 그 이후인 상품 보관방법: 냉장보관 개당 중량: 400g 부위: 기타 총 중량: 800g 쿠팡상품번호: 7307986457 - 18715818030",
+      "link": "https://link.coupang.com/a/dsyLQv",
+      "image": "https://thumbnail2.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/2380451249864036-83a8b57a-a4d3-4cb1-b034-b9e2151023cc.jpg",
+      "category": "고기류",
+      "order": 49,
+      "active": true,
+      "id": 51
+    },
+    {
+      "name": "오뚜기 렌지에 돌려먹는 고등어구이 (냉동), 70g, 5개",
+      "description": "소비기한(또는 유통기한): 2027-05-05 이거나 그 이후인 상품 보관방법: 냉동보관 개당 중량: 70g 쿠팡상품번호: 1214133226 - 2203593200",
+      "link": "https://link.coupang.com/a/dsyOdN",
+      "image": "https://thumbnail2.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/183960492542762-c4037027-1a8a-4547-9395-10399364cf6a.jpg",
+      "category": "고기류",
+      "order": 50,
+      "active": true,
+      "id": 52
+    },
+    {
+      "name": "두원 나비침 Scalp Vein Set 19G 3/4inch 1팩 100개입 06941",
+      "description": "쿠팡상품번호: 9143241476 - 26915151462",
+      "link": "https://link.coupang.com/a/dsySWl",
+      "image": "https://thumbnail1.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/8212/5c056fbf71bcd9a0ef500148411b506b439270a0ae71994633544342caf7.jpg",
+      "category": "의료",
+      "order": 51,
+      "active": true,
+      "id": 53
     }
   ],
   "categories": [
@@ -411,6 +521,7 @@
     "주방",
     "공동구매",
     "고기류",
-    "레토르트"
+    "레토르트",
+    "의료"
   ]
 }
