@@ -34,37 +34,30 @@
             min-height: 100vh;
         }
 
+        /* 헤더 - 배너 이미지 적용 */
         .header {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            padding: 2.5rem 1.5rem;
+            background: url('./coupang-banner.png') center center / cover no-repeat;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            position: relative;
+        }
+
+        .header-content {
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.95) 0%, rgba(232, 90, 42, 0.95) 100%);
+            padding: 1.5rem;
             text-align: center;
             color: white;
-            position: relative;
-            overflow: hidden;
         }
 
-        .header::before {
-            content: '';
-            position: absolute;
-            top: -50%; left: -50%;
-            width: 200%; height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
-            animation: pulse 4s ease-in-out infinite;
-        }
+        .header h1 { font-size: 1.5rem; font-weight: 900; margin-bottom: 0.3rem; letter-spacing: -0.02em; }
+        .header-subtitle { font-size: 0.9rem; opacity: 0.95; font-weight: 400; }
 
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.5; }
-            50% { transform: scale(1.1); opacity: 0.3; }
-        }
+        .trust-badges { display: flex; justify-content: center; gap: 0.8rem; margin-top: 1rem; flex-wrap: wrap; }
+        .badge { background: rgba(255,255,255,0.2); padding: 0.4rem 0.8rem; border-radius: 50px; font-size: 0.75rem; backdrop-filter: blur(10px); }
 
-        .header-content { position: relative; z-index: 1; }
-        .header h1 { font-size: 1.8rem; font-weight: 900; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
-        .header-subtitle { font-size: 0.95rem; opacity: 0.95; font-weight: 400; }
-
-        .trust-badges { display: flex; justify-content: center; gap: 1rem; margin-top: 1.2rem; flex-wrap: wrap; }
-        .badge { background: rgba(255,255,255,0.2); padding: 0.4rem 0.8rem; border-radius: 50px; font-size: 0.8rem; backdrop-filter: blur(10px); }
-
-        /* 검색창 스타일 추가 */
+        /* 검색창 스타일 */
         .search-section {
             padding: 1rem;
             background: var(--bg-card);
@@ -268,7 +261,8 @@
         .product-count { text-align: center; font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem; }
 
         @media (min-width: 640px) {
-            .header h1 { font-size: 2.2rem; }
+            .header { min-height: 250px; }
+            .header h1 { font-size: 1.8rem; }
             .container { padding: 1.5rem; }
         }
     </style>
@@ -286,7 +280,7 @@
         </div>
     </header>
 
-    <!-- 검색창 섹션 추가 -->
+    <!-- 검색창 섹션 -->
     <section class="search-section">
         <div class="search-container">
             <span class="search-icon">🔍</span>
