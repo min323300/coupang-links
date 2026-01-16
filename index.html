@@ -34,6 +34,22 @@
             min-height: 100vh;
         }
 
+        /* 2. 상단 고정 안내 바 */
+        .top-notice-bar {
+            background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
+            color: white;
+            text-align: center;
+            padding: 0.6rem 1rem;
+            font-size: 0.85rem;
+            position: sticky;
+            top: 0;
+            z-index: 200;
+        }
+
+        .top-notice-bar span {
+            margin-right: 0.3rem;
+        }
+
         /* 헤더 - 배너 이미지 배경 + 텍스트 오버레이 */
         .header {
             background: url('./coupang-banner.png') center center / cover no-repeat;
@@ -176,7 +192,7 @@
             background: var(--bg-card);
             border-bottom: 1px solid var(--border);
             position: sticky;
-            top: 0;
+            top: 42px;
             z-index: 100;
             overflow-x: auto;
         }
@@ -251,7 +267,29 @@
         .product-info { flex: 1; min-width: 0; }
         .product-name { font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem; line-height: 1.4; }
         .product-desc { font-size: 0.85rem; color: var(--text-secondary); }
-        .product-category { font-size: 0.7rem; color: var(--primary); background: #FDF2F8; padding: 0.2rem 0.5rem; border-radius: 4px; margin-top: 0.4rem; display: inline-block; }
+        
+        .product-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.4rem;
+            flex-wrap: wrap;
+        }
+        
+        .product-category { font-size: 0.7rem; color: var(--primary); background: #FDF2F8; padding: 0.2rem 0.5rem; border-radius: 4px; }
+        
+        /* 4. 새 탭 아이콘 표시 */
+        .new-tab-badge {
+            font-size: 0.65rem;
+            color: #6B7280;
+            background: #F3F4F6;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.2rem;
+        }
+        
         .product-arrow { color: var(--text-secondary); font-size: 1.2rem; transition: transform 0.2s ease; }
         .product-card:hover .product-arrow { transform: translateX(4px); color: var(--primary); }
 
@@ -289,6 +327,121 @@
         @keyframes spin { to { transform: rotate(360deg); } }
         .product-count { text-align: center; font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem; }
 
+        /* 1. 토스트 알림 */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #1F2937;
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            z-index: 1000;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            opacity: 0;
+            transition: all 0.3s ease;
+            max-width: 90%;
+            text-align: center;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        .toast-icon {
+            margin-right: 0.5rem;
+        }
+
+        /* 3. 첫 방문 팝업 */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.6);
+            z-index: 500;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .popup-overlay.show {
+            display: flex;
+        }
+
+        .popup {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: popupIn 0.3s ease;
+        }
+
+        @keyframes popupIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .popup-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .popup h2 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .popup p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .popup-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .popup-btn {
+            padding: 0.9rem 1.5rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .popup-btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .popup-btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        .popup-btn-secondary {
+            background: #F3F4F6;
+            color: var(--text-secondary);
+        }
+
+        .popup-btn-secondary:hover {
+            background: #E5E7EB;
+        }
+
         @media (min-width: 640px) {
             .header { min-height: 320px; }
             .header h1 { font-size: 2rem; }
@@ -297,6 +450,11 @@
     </style>
 </head>
 <body>
+    <!-- 2. 상단 고정 안내 바 -->
+    <div class="top-notice-bar">
+        <span>💡</span> 상품은 새 탭에서 열립니다. 쇼핑 후 이 탭으로 돌아오세요!
+    </div>
+
     <!-- 배너 이미지 배경 + 텍스트 오버레이 -->
     <header class="header">
         <div class="header-content">
@@ -342,6 +500,30 @@
         <p class="footer-info">© 2025 추천 상품 모음 | 마지막 업데이트: <span id="lastUpdated">-</span></p>
     </footer>
 
+    <!-- 1. 토스트 알림 -->
+    <div class="toast" id="toast">
+        <span class="toast-icon">✅</span>
+        새 탭에서 열렸습니다! 장바구니 담기 후 이 탭으로 돌아오세요
+    </div>
+
+    <!-- 3. 첫 방문 팝업 -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup">
+            <div class="popup-icon">🛒</div>
+            <h2>이용 안내</h2>
+            <p>
+                상품 클릭 시 <strong>새 탭에서 쿠팡이 열립니다.</strong><br><br>
+                장바구니에 담거나 구매 후,<br>
+                <strong>브라우저 탭을 전환</strong>하여<br>
+                이 페이지로 돌아와 쇼핑을 계속하세요!
+            </p>
+            <div class="popup-buttons">
+                <button class="popup-btn popup-btn-primary" onclick="closePopup(false)">확인</button>
+                <button class="popup-btn popup-btn-secondary" onclick="closePopup(true)">다시 보지 않기</button>
+            </div>
+        </div>
+    </div>
+
     <script>
         let productsData = null;
         let currentCategory = '전체';
@@ -352,6 +534,30 @@
         const searchClear = document.getElementById('searchClear');
         const searchResultInfo = document.getElementById('searchResultInfo');
 
+        // 3. 첫 방문 팝업 체크
+        function checkFirstVisit() {
+            const hidePopup = localStorage.getItem('hideGuidePopup');
+            if (!hidePopup) {
+                document.getElementById('popupOverlay').classList.add('show');
+            }
+        }
+
+        function closePopup(dontShowAgain) {
+            document.getElementById('popupOverlay').classList.remove('show');
+            if (dontShowAgain) {
+                localStorage.setItem('hideGuidePopup', 'true');
+            }
+        }
+
+        // 1. 토스트 알림 표시
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
         async function loadProducts() {
             try {
                 const response = await fetch('./data/products.json?v=' + Date.now());
@@ -360,6 +566,7 @@
                 renderCategories();
                 renderProducts();
                 updateLastUpdated();
+                checkFirstVisit(); // 첫 방문 체크
             } catch (error) {
                 console.error('Failed to load products:', error);
                 document.getElementById('productList').innerHTML = '<div class="empty-state"><div class="empty-state-icon">😅</div><p>상품을 불러올 수 없습니다.</p></div>';
@@ -441,16 +648,25 @@
                 const displayDesc = searchQuery ? highlightText(product.description, searchQuery) : product.description;
                 
                 return '<article class="product-card" style="animation-delay: ' + (index * 0.1) + 's">' +
-                '<a href="' + product.link + '" target="_blank" rel="noopener" class="product-link" onclick="trackClick(' + product.id + ')">' +
+                '<a href="' + product.link + '" target="_blank" rel="noopener" class="product-link" onclick="handleProductClick(' + product.id + ')">' +
                 '<div class="product-image">' + imageContent + '</div>' +
                 '<div class="product-info">' +
                 '<h2 class="product-name">' + displayName + '</h2>' +
                 '<p class="product-desc">' + displayDesc + '</p>' +
+                '<div class="product-meta">' +
                 '<span class="product-category">' + product.category + '</span>' +
+                '<span class="new-tab-badge">↗️ 새 탭</span>' +
+                '</div>' +
                 '</div>' +
                 '<span class="product-arrow">→</span>' +
                 '</a></article>';
             }).join('');
+        }
+
+        // 상품 클릭 시 토스트 표시 + 클릭 추적
+        function handleProductClick(productId) {
+            showToast();
+            trackClick(productId);
         }
 
         function trackClick(productId) {
@@ -492,6 +708,13 @@
         searchInput.addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
                 searchInput.blur();
+            }
+        });
+
+        // 팝업 외부 클릭 시 닫기
+        document.getElementById('popupOverlay').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closePopup(false);
             }
         });
 
