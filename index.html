@@ -12,8 +12,8 @@
     
     <style>
         :root {
-            --primary: #FF6B35;
-            --primary-dark: #E85A2A;
+            --primary: #EC4899;
+            --primary-dark: #DB2777;
             --secondary: #004E89;
             --bg-main: #FAFAFA;
             --bg-card: #FFFFFF;
@@ -34,28 +34,57 @@
             min-height: 100vh;
         }
 
-        /* 헤더 - 배너 이미지 적용 */
+        /* 헤더 - 배너 이미지 배경 + 텍스트 오버레이 */
         .header {
             background: url('./coupang-banner.png') center center / cover no-repeat;
-            min-height: 200px;
+            min-height: 280px;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
             position: relative;
         }
 
+        .header::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60%;
+            background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%);
+        }
+
         .header-content {
-            background: linear-gradient(135deg, rgba(255, 107, 53, 0.95) 0%, rgba(232, 90, 42, 0.95) 100%);
+            position: relative;
+            z-index: 1;
             padding: 1.5rem;
             text-align: center;
             color: white;
         }
 
-        .header h1 { font-size: 1.5rem; font-weight: 900; margin-bottom: 0.3rem; letter-spacing: -0.02em; }
-        .header-subtitle { font-size: 0.9rem; opacity: 0.95; font-weight: 400; }
+        .header h1 { 
+            font-size: 1.6rem; 
+            font-weight: 900; 
+            margin-bottom: 0.3rem; 
+            letter-spacing: -0.02em;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .header-subtitle { 
+            font-size: 0.9rem; 
+            opacity: 0.95; 
+            font-weight: 400;
+            text-shadow: 0 1px 5px rgba(0,0,0,0.3);
+        }
 
         .trust-badges { display: flex; justify-content: center; gap: 0.8rem; margin-top: 1rem; flex-wrap: wrap; }
-        .badge { background: rgba(255,255,255,0.2); padding: 0.4rem 0.8rem; border-radius: 50px; font-size: 0.75rem; backdrop-filter: blur(10px); }
+        .badge { 
+            background: rgba(255,255,255,0.25); 
+            padding: 0.4rem 0.8rem; 
+            border-radius: 50px; 
+            font-size: 0.75rem; 
+            backdrop-filter: blur(10px);
+            text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
 
         /* 검색창 스타일 */
         .search-section {
@@ -85,7 +114,7 @@
         .search-input:focus {
             border-color: var(--primary);
             background: var(--bg-card);
-            box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.1);
+            box-shadow: 0 0 0 4px rgba(236, 72, 153, 0.1);
         }
 
         .search-input::placeholder {
@@ -202,7 +231,7 @@
 
         .product-image {
             width: 70px; height: 70px;
-            background: linear-gradient(135deg, #FFF5F0 0%, #FFE8DE 100%);
+            background: linear-gradient(135deg, #FDF2F8 0%, #FCE7F3 100%);
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -222,13 +251,13 @@
         .product-info { flex: 1; min-width: 0; }
         .product-name { font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem; line-height: 1.4; }
         .product-desc { font-size: 0.85rem; color: var(--text-secondary); }
-        .product-category { font-size: 0.7rem; color: var(--primary); background: #FFF0EB; padding: 0.2rem 0.5rem; border-radius: 4px; margin-top: 0.4rem; display: inline-block; }
+        .product-category { font-size: 0.7rem; color: var(--primary); background: #FDF2F8; padding: 0.2rem 0.5rem; border-radius: 4px; margin-top: 0.4rem; display: inline-block; }
         .product-arrow { color: var(--text-secondary); font-size: 1.2rem; transition: transform 0.2s ease; }
         .product-card:hover .product-arrow { transform: translateX(4px); color: var(--primary); }
 
         /* 하이라이트 스타일 */
         .highlight {
-            background: #FFEB3B;
+            background: #FBCFE8;
             padding: 0 2px;
             border-radius: 2px;
         }
@@ -248,7 +277,7 @@
             max-width: 400px;
             margin: 0 auto;
             padding: 1rem;
-            background: #F9FAFB;
+            background: #FDF2F8;
             border-radius: 8px;
         }
 
@@ -261,13 +290,14 @@
         .product-count { text-align: center; font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem; }
 
         @media (min-width: 640px) {
-            .header { min-height: 250px; }
-            .header h1 { font-size: 1.8rem; }
+            .header { min-height: 320px; }
+            .header h1 { font-size: 2rem; }
             .container { padding: 1.5rem; }
         }
     </style>
 </head>
 <body>
+    <!-- 배너 이미지 배경 + 텍스트 오버레이 -->
     <header class="header">
         <div class="header-content">
             <h1>✨ 추천 상품 모음</h1>
