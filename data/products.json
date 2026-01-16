@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-15",
+  "lastUpdated": "2026-01-16",
   "products": [
     {
       "name": "액체세제 빨래세제",
@@ -510,6 +510,356 @@
       "order": 51,
       "active": true,
       "id": 53
+    },
+    {
+      "name": "최현석셰프의 쵸이닷 양식 생면 파스타 밀키트 베스트 SET (새우봉골레파스타+가리비바질파스타+트러플크림뇨끼)",
+      "description": "쿠팡상품번호: 9084191755 - 26689468679",
+      "link": "https://link.coupang.com/a/dteGTq",
+      "image": "https://thumbnail11.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/d161/5b3c0347c969b29ec92f12b41d1618f9b30580030abdfcd089c10c9befef.jpg",
+      "category": "흑백요리사",
+      "order": 52,
+      "active": true,
+      "id": 54
+    },
+    {
+      "name": "정호영 정호영셰프의 기운센 민물장어구이 150g x 3팩, 3개",
+      "description": "총 수량: 3개 쿠팡상품번호: 7344397260 - 18884812065",
+      "link": "https://link.coupang.com/a/dteOdK",
+      "image": "https://thumbnail11.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/0f38/484a2d6dcf1d07f8c0a130f69e2b8fdb5b825a2d67d1c96c5bafcbb4013e.jpg",
+      "category": "흑백요리사",
+      "order": 53,
+      "active": true,
+      "id": 55
+    },
+    {
+      "name": "정호영의 정성담은 푸짐한 동태알탕, 800g, 4개",
+      "description": "수산물 용도: 다용도 총 수량: 4개 쿠팡상품번호: 8243683028 - 21706685153",
+      "link": "https://link.coupang.com/a/dteR68",
+      "image": "https://thumbnail12.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/a6ff/6ac17ec3c95d02b9b852652585545ae8d4ba8e287a3f5d72fcca627d45be.jpg",
+      "category": "흑백요리사",
+      "order": 54,
+      "active": true,
+      "id": 56
+    },
+    {
+      "name": "PB 최강록의 리얼웨지감자, 14개, 45g",
+      "description": "쿠팡상품번호: 8952652452 - 26188663766",
+      "link": "https://link.coupang.com/a/dteYkX",
+      "image": "https://t2c.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/04f9/6ed188bae4d0b93384729040484fcb5c9b4209945872e10902fa3ce8a489.png",
+      "category": "흑백요리사",
+      "order": 55,
+      "active": true,
+      "id": 57
+    },
+    {
+      "name": "최강록의 요리 노트",
+      "description": "쿠팡상품번호: 8446226417 - 24433606224",
+      "link": "https://link.coupang.com/a/dte2u5",
+      "image": "https://thumbnail14.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/0df5/a4c80e31ba6f294058fdda59062de6cc0817ff1b5d93e2f721e53dbd24d5.jpg",
+      "category": "흑백요리사",
+      "order": 56,
+      "active": true,
+      "id": 58
+    },
+    {
+      "name": "윤남노 pick 고메프리미엄 숄더랙 양갈비 250g*6팩(소스증정), 250g, 6개",
+      "description": "쿠팡상품번호: 9042254680 - 26531390560",
+      "link": "https://link.coupang.com/a/dte7B5",
+      "image": "https://thumbnail5.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/9838/6716a57ad28f501b0fc6c7dd4b8b6e5b25d32cb32ad2905f0f8c97539128.jpg",
+      "category": "흑백요리사",
+      "order": 57,
+      "active": true,
+      "id": 59
+    },
+    {
+      "name": "임성근 만능간장 간장 소스 500g, 1개",
+      "description": "총 수량: 1개 쿠팡상품번호: 8380358290 - 25249577891",
+      "link": "https://link.coupang.com/a/dtffWT",
+      "image": "https://t5c.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/3485/ced60fab9ee9d0ac0a7d35dea4f958c5e2bb0ad7d09dd25841790d8d65b9.JPG",
+      "category": "흑백요리사",
+      "order": 58,
+      "active": true,
+      "id": 60
+    },
+    {
+      "name": "[프레시지] 최현석셰프의 풍미가득한 돈가스 모짜렐라 치즈돈까스 120g",
+      "description": "개당 중량: 120g 보관방법: 냉동보관 쿠팡상품번호: 8487841534 - 25481875124",
+      "link": "https://link.coupang.com/a/dtfj2l",
+      "image": "https://thumbnail8.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/130a/4defe82092480b162d78b72173b60b9b8beabfe84b61e5057a9eb94d3536.jpg",
+      "category": "흑백요리사",
+      "order": 59,
+      "active": true,
+      "id": 61
+    },
+    {
+      "name": "최현석의 쵸이닷 새우 명란 오일 파스타 (냉동), 268g, 2개",
+      "description": "소비기한(또는 유통기한): 2026-12-02 이거나 그 이후인 상품 포장형태: 봉지 라면 종류: 스파게티/파스타 총 수량: 2개 면 종류: 기본면 쿠팡상품번호: 8707338887 - 25312672091",
+      "link": "https://link.coupang.com/a/dtfqpe",
+      "image": "https://t2c.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/528058232511560-08b1dd24-8494-47d2-9640-52ca450f5754.jpg",
+      "category": "흑백요리사",
+      "order": 60,
+      "active": true,
+      "id": 62
+    },
+    {
+      "name": "쵸이닷 가리비 바질파스타(냉동), 300g, 2개",
+      "description": "소비기한(또는 유통기한): 2026-06-29 이거나 그 이후인 상품 보관방법: 냉동보관 포장형태: 봉지 라면 종류: 스파게티/파스타 쿠팡상품번호: 8700741853 - 25273914242",
+      "link": "https://link.coupang.com/a/dtftlw",
+      "image": "https://t5c.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/429897490561926-7524b1c7-4887-4e7a-ba05-7c7ec32f6033.jpg",
+      "category": "흑백요리사",
+      "order": 61,
+      "active": true,
+      "id": 63
+    },
+    {
+      "name": "최현석의 쵸이닷 트러플 크림 뇨끼 (냉동), 270g, 2개",
+      "description": "소비기한(또는 유통기한): 2026-06-30 이거나 그 이후인 상품 보관방법: 냉동보관 총 중량: 540g 쿠팡상품번호: 8700335683 - 25312670135",
+      "link": "https://link.coupang.com/a/dtfxgc",
+      "image": "https://thumbnail8.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/107018156751352-89390d38-74e9-44d0-a444-25b9d016bbe8.jpg",
+      "category": "흑백요리사",
+      "order": 62,
+      "active": true,
+      "id": 64
+    },
+    {
+      "name": "최현석의 쵸이닷 봉골레 파스타 (냉동), 277g, 1개",
+      "description": "소비기한(또는 유통기한): 2026-07-02 이거나 그 이후인 상품 보관방법: 냉동보관 포장형태: 봉지 라면 종류: 스파게티/파스타 쿠팡상품번호: 8707338892 - 25286962309",
+      "link": "https://link.coupang.com/a/dtfBgf",
+      "image": "https://thumbnail10.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/249432376445769-771158b6-0875-4446-9723-248b280bff31.jpg",
+      "category": "흑백요리사",
+      "order": 63,
+      "active": true,
+      "id": 65
+    },
+    {
+      "name": "고메 딤섬 정지선 셰프 샤오롱바오 (냉동), 141g, 2개",
+      "description": "소비기한(또는 유통기한): 2026-08-26 이거나 그 이후인 상품 보관방법: 냉동보관 총 수량: 2개 개당 수량: 1개입 총 중량: 282g 쿠팡상품번호: 9086659925 - 26739719665",
+      "link": "https://link.coupang.com/a/dtfFXE",
+      "image": "https://t4c.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/b1faf03d-763e-47b5-ad72-2105da3dc5254798258181701321897.png",
+      "category": "흑백요리사",
+      "order": 64,
+      "active": true,
+      "id": 66
+    },
+    {
+      "name": "고메 딤섬 정지선 새우하가우 (냉동), 135g, 1개",
+      "description": "소비기한(또는 유통기한): 2026-09-08 이거나 그 이후인 상품 보관방법: 냉동보관 총 수량: 1개 개당 수량: 1개입 총 중량: 135g 쿠팡상품번호: 9169445554 - 27021632928",
+      "link": "https://link.coupang.com/a/dtfJOH",
+      "image": "https://thumbnail15.coupangcdn.com/thumbnails/remote/212x212ex/image/rs_quotation_api/q4osgzyk/5b8acfc4ee1b40e8b96c47b03f62538b.jpg",
+      "category": "흑백요리사",
+      "order": 65,
+      "active": true,
+      "id": 67
+    },
+    {
+      "name": "프레시지 중식대가 여경래의 짬뽕 2인분 (냉동), 1.46kg, 1개",
+      "description": "소비기한(또는 유통기한): 2026-09-28 이거나 그 이후인 상품 보관방법: 냉동보관 포장형태: 봉지 라면 종류: 짬뽕라면 총 수량: 1개 쿠팡상품번호: 9131160572 - 26868098477",
+      "link": "https://link.coupang.com/a/dtfNBz",
+      "image": "https://thumbnail4.coupangcdn.com/thumbnails/remote/212x212ex/image/rs_quotation_api/dlujm9py/ef4a18dbe9a649eaaa7b2de88d5224d1.jpg",
+      "category": "흑백요리사",
+      "order": 66,
+      "active": true,
+      "id": 68
+    },
+    {
+      "name": "프레시지 중식대가 여경래의 사골 짬뽕 2인분 (냉동), 1.46kg, 1개",
+      "description": "소비기한(또는 유통기한): 2026-11-04 이거나 그 이후인 상품 보관방법: 냉동보관 포장형태: 봉지 총 수량: 1개 쿠팡상품번호: 9179054377 - 27066213201",
+      "link": "https://link.coupang.com/a/dtfQ25",
+      "image": "https://t1c.coupangcdn.com/thumbnails/remote/212x212ex/image/rs_quotation_api/zi1gbg1r/3c4e885163934d43a4dab47c6259a8b2.jpg",
+      "category": "흑백요리사",
+      "order": 67,
+      "active": true,
+      "id": 69
+    },
+    {
+      "name": "중식대가 여경래 짜장면 2인분 (냉동), 1.08kg, 1개",
+      "description": "소비기한(또는 유통기한): 2026-09-21 이거나 그 이후인 상품 보관방법: 냉동보관 라면 종류: 짜장라면 총 수량: 1개 쿠팡상품번호: 9009414770 - 26406838064",
+      "link": "https://link.coupang.com/a/dtfUwi",
+      "image": "https://thumbnail2.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/193993881715021-7705c1ce-6919-4eaa-9d6f-62a178839a5b.jpg",
+      "category": "흑백요리사",
+      "order": 68,
+      "active": true,
+      "id": 70
+    },
+    {
+      "name": "철가방요리사 임태훈 셰프의 짜장면 2인분 (냉동), 800g, 1개",
+      "description": "소비기한(또는 유통기한): 2026-09-03 이거나 그 이후인 상품 보관방법: 냉동보관 총 수량: 1개 총 중량: 800g 섭취방법: 즉석반조리식품 쿠팡상품번호: 9150767211 - 26945130828",
+      "link": "https://link.coupang.com/a/dtfXRj",
+      "image": "https://t1c.coupangcdn.com/thumbnails/remote/212x212ex/image/rs_quotation_api/cjrcdol5/91fd494e590b4b518f379dc7089f9f76.jpg",
+      "category": "흑백요리사",
+      "order": 69,
+      "active": true,
+      "id": 71
+    },
+    {
+      "name": "흑백요리사 통영식 비빔나물, 2개, 120g",
+      "description": "쿠팡상품번호: 9259361168 - 27395287045",
+      "link": "https://link.coupang.com/a/dtf1tl",
+      "image": "https://thumbnail13.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/420b/ed974c0d451309ade30c51e53913e9ded2775c2bbd98fbba7f1b9e826cd5.png",
+      "category": "흑백요리사",
+      "order": 70,
+      "active": true,
+      "id": 72
+    },
+    {
+      "name": "이모카세 1호 참기름반 들기름반 생생감자칩, 4개, 60g",
+      "description": "쿠팡상품번호: 8610323327 - 24973056997",
+      "link": "https://link.coupang.com/a/dtf5DR",
+      "image": "https://t5c.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/7b3e/4d4b11917e4e4ec899f575ec6cf8079267deebc7c0892a36d9895ce1577b.PNG",
+      "category": "흑백요리사",
+      "order": 71,
+      "active": true,
+      "id": 73
+    },
+    {
+      "name": "광천김 이모카세 1호 김자반, 50g, 3개",
+      "description": "소비기한(또는 유통기한): 2026-05-20 이거나 그 이후인 상품 김 형태: 김자반 개당 수량: 1개입 보관방법: 실온보관 섭취방법: 즉석섭취식품 쿠팡상품번호: 8701173574 - 25275594057",
+      "link": "https://link.coupang.com/a/dtf9aC",
+      "image": "https://t5c.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/622e7a3c-c7ad-4abe-9c55-428fe4faa4941298056454991161894.png",
+      "category": "흑백요리사",
+      "order": 72,
+      "active": true,
+      "id": 74
+    },
+    {
+      "name": "광천김 이모카세 1호 도시락김 12p, 48g, 1개",
+      "description": "소비기한(또는 유통기한): 2026-04-24 이거나 그 이후인 상품 쿠팡상품번호: 8605536418 - 24973446198",
+      "link": "https://link.coupang.com/a/dtgcG5",
+      "image": "https://t3a.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/2025/02/12/14/5/930d7c5d-6323-47fa-b396-49ecdbda1b0f.jpg",
+      "category": "흑백요리사",
+      "order": 73,
+      "active": true,
+      "id": 75
+    },
+    {
+      "name": "흑백요리사 안유성 100%국내산 동전육수 자연육수 코인육수 육수",
+      "description": "쿠팡상품번호: 9078919954 - 26669417938",
+      "link": "https://link.coupang.com/a/dtgfQ2",
+      "image": "https://t1c.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/image_audit/stage/manual/52b87e7026c88f83f3355c64a1b27afd912eb5ef00468fe5956beaf7c1da_1761207722267.jpg",
+      "category": "흑백요리사",
+      "order": 74,
+      "active": true,
+      "id": 76
+    },
+    {
+      "name": "최현석셰프의 쵸이닷 양식 생면 파스타 밀키트 베스트 SET (새우봉골레파스타+가리비바질파스타+트러플크림뇨끼)",
+      "description": "쿠팡상품번호: 9084191755 - 26689468679",
+      "link": "https://link.coupang.com/a/dtgjyM",
+      "image": "https://thumbnail7.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/d161/5b3c0347c969b29ec92f12b41d1618f9b30580030abdfcd089c10c9befef.jpg",
+      "category": "흑백요리사",
+      "order": 75,
+      "active": true,
+      "id": 77
+    },
+    {
+      "name": "스너글 건조기 드라이시트 블루 스파클, 1개, 120매입",
+      "description": "유통기한: 2028-04-28 이거나 그 이후인 상품 쿠팡상품번호: 8929350698 - 24613960727",
+      "link": "https://link.coupang.com/a/dtgnhM",
+      "image": "https://thumbnail4.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/b8b5/db81ee3ef634183a34f0fa789cad5c00b81780be87d29eb96b7820093d85.jpg",
+      "category": "생활",
+      "order": 76,
+      "active": true,
+      "id": 78
+    },
+    {
+      "name": "다우니 퍼퓸쥬얼 자수정 베리 향기부스터 리필, 950g, 2개",
+      "description": "구성: 리필 종류: 섬유유연제 쿠팡상품번호: 9207132474 - 27200318751",
+      "link": "https://link.coupang.com/a/dtgsYX",
+      "image": "https://t5c.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/48861fc4-65d2-4398-89b3-e99b1a16024b14924231928723076951.png",
+      "category": "생활",
+      "order": 77,
+      "active": true,
+      "id": 79
+    },
+    {
+      "name": "다우니 퍼퓸 쥬얼 에메랄드 브리즈 향기 부스터 리필, 950g, 1개",
+      "description": "구성: 리필 종류: 섬유유연제 쿠팡상품번호: 9207153417 - 27192462023",
+      "link": "https://link.coupang.com/a/dtgxVq",
+      "image": "https://t5c.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/2025/11/25/15/8/de890265-405c-44c9-8e0e-f4163c043ba7.png",
+      "category": "생활",
+      "order": 78,
+      "active": true,
+      "id": 80
+    },
+    {
+      "name": "리코차니몰 노브랜드 신선 별미총각김치 1.5kg",
+      "description": "종류: 총각김치 쿠팡상품번호: 7711405270 - 14578346727",
+      "link": "https://link.coupang.com/a/dtgCtJ",
+      "image": "https://thumbnail13.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/570b/134168e8aa73f915532f68d3b71cd0756bbbe0bdf98efcab9679848a6956.png",
+      "category": "식품",
+      "order": 79,
+      "active": true,
+      "id": 81
+    },
+    {
+      "name": "노브랜드 별미 포기김치 3.5kg, 1개",
+      "description": "종류: 본상품선택 섭취방법: 즉석섭취식품 구성: 단품세트 쿠팡상품번호: 2252724280 - 3851821044",
+      "link": "https://link.coupang.com/a/dtgGG9",
+      "image": "https://thumbnail2.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/image_audit/prod/64e51a93-6597-4779-b1ae-f420127d95ba_fixing_v2.png",
+      "category": "식품",
+      "order": 80,
+      "active": true,
+      "id": 82
+    },
+    {
+      "name": "오뚜기옛날 오쉐프 참기름, 1.8L, 1개",
+      "description": "소비기한(또는 유통기한): 2026-07-20 이거나 그 이후인 상품 총 용량: 1.8L 대용량상품: Y 쿠팡상품번호: 1491246254 - 16973052659",
+      "link": "https://link.coupang.com/a/dtgLSw",
+      "image": "https://thumbnail4.coupangcdn.com/thumbnails/remote/212x212ex/image/1025_amir_coupang_oct_80k/6d52/dc2d525210d191e14adaf439b731f707a0776e64a6550061a2d7bf263c11.jpg",
+      "category": "식품",
+      "order": 81,
+      "active": true,
+      "id": 83
+    },
+    {
+      "name": "오뚜기옛날 참기름, 500ml, 2개",
+      "description": "소비기한(또는 유통기한): 2026-02-16 이거나 그 이후인 상품 총 용량: 1000ml 쿠팡상품번호: 7912979339 - 21941122865",
+      "link": "https://link.coupang.com/a/dtgRvl",
+      "image": "https://t2a.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/88369776374320-18c0c6af-da19-4750-9eee-1998fa904e5c.jpg",
+      "category": "식품",
+      "order": 82,
+      "active": true,
+      "id": 84
+    },
+    {
+      "name": "모나리자 벨라지오 천연 펄프 각티슈 2겹, 250매, 3개",
+      "description": "미니각티슈 여부: 일반 겹수: 2겹 펄프종류: 천연펄프 향 유무: 무향 무형광여부: 무형광 쿠팡상품번호: 8024011357 - 235800729",
+      "link": "https://link.coupang.com/a/dtgVeT",
+      "image": "https://t2a.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/c14b/ecee9e9793e2ab1840ad41536962fc832eecf79581ffb2ba524ee28ffc55.png",
+      "category": "생활",
+      "order": 83,
+      "active": true,
+      "id": 85
+    },
+    {
+      "name": "코멧 깨끗한 천연펄프 키친타월, 150매, 8개",
+      "description": "겹수: 2겹 내지 매수: 150매 총 수량: 8개 쿠팡상품번호: 169280610 - 484461411",
+      "link": "https://link.coupang.com/a/dtgX70",
+      "image": "https://thumbnail1.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/77501536142093-e3d45edd-9f61-4817-9073-b527fca4280f.png",
+      "category": "생활",
+      "order": 84,
+      "active": true,
+      "id": 86
+    },
+    {
+      "name": "우리홈즈 족저근막 리커버리 무중력 쿠션 샌들 슬리퍼",
+      "description": "사용계절: 여름용 색상계열: 그린계열 쿠팡상품번호: 7972455419 - 22417368639",
+      "link": "https://link.coupang.com/a/dtg2Kt",
+      "image": "https://t5c.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/560b/92f21c803d70cd9d2e0ccad6e52dcc278497fc97855f603fa4930a8b073a.jpg",
+      "category": "생활",
+      "order": 85,
+      "active": true,
+      "id": 87
+    },
+    {
+      "name": "펠체아주라 이탈리아 150년 향좋은 초고농축 섬유유연제 블랙오키드, 900ml, 2개",
+      "description": "섬유유연제 제형: 고농축액체형 쿠팡상품번호: 7152156354 - 25633148212",
+      "link": "https://link.coupang.com/a/dtg9l8",
+      "image": "https://t4a.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/dbe7/f6d6155f758b94c5bd455af96e661c1d49e166448a11b3595dbde2be00c4.jpg",
+      "category": "생활",
+      "order": 86,
+      "active": true,
+      "id": 88
     }
   ],
   "categories": [
@@ -518,10 +868,10 @@
     "뷰티",
     "식품",
     "반려동물용품",
-    "주방",
     "공동구매",
     "고기류",
     "레토르트",
-    "의료"
+    "의료",
+    "흑백요리사"
   ]
 }
