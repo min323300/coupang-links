@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-16",
+  "lastUpdated": "2026-01-20",
   "products": [
     {
       "name": "액체세제 빨래세제",
@@ -860,6 +860,116 @@
       "order": 86,
       "active": true,
       "id": 88
+    },
+    {
+      "name": "광동진한헛개차 무라벨 그린, 330ml, 20개",
+      "description": "소비기한(또는 유통기한): 2026-06-30 이거나 그 이후인 상품 타입: 음료 용기 타입: 플라스틱병 전통차 종류: 헛개수차 가정용/업소용: 가정용 쿠팡상품번호: 7323282203 - 18786976311",
+      "link": "https://link.coupang.com/a/dvWk3U",
+      "image": "https://thumbnail7.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/403654183835392-aaeb3f5e-d3c4-41fd-b74e-6de51e279145.jpg",
+      "category": "식품",
+      "order": 87,
+      "active": true,
+      "id": 89
+    },
+    {
+      "name": "오뚜기옛날 3일 숙성 카레 약간매운맛 고형, 200g, 1개",
+      "description": "소비기한(또는 유통기한): 2026-06-10 이거나 그 이후인 상품 맛: 약간매운맛 총 수량: 1개 쿠팡상품번호: 7038377394 - 17397527264",
+      "link": "https://link.coupang.com/a/dvWtRk",
+      "image": "https://thumbnail10.coupangcdn.com/thumbnails/remote/212x212ex/image/1025_amir_coupang_oct_80k/54c1/91105751bd0fdc6d160eabc3e52a39d519c91a59766e55b6c6979be7e984.jpg",
+      "category": "식품",
+      "order": 88,
+      "active": true,
+      "id": 90
+    },
+    {
+      "name": "나드 발 각질 필링 스프레이",
+      "description": "유통기한 (사용기한 표시의무 대상 상품은 사용기한): 2027-05-29 이거나 그 이후인 상품 총 수량: 1개 쿠팡상품번호: 7432147012 - 19305633127",
+      "link": "https://link.coupang.com/a/dvWCVJ",
+      "image": "https://thumbnail1.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/2023/06/29/14/6/a07afe8e-f11e-4a1b-b253-cc505eae557a.jpg",
+      "category": "생활",
+      "order": 89,
+      "active": true,
+      "id": 91
+    },
+    {
+      "name": "곰곰 신선한 1A 우유, 900ml, 1개",
+      "description": "소비기한(또는 유통기한): 2026-01-26 이거나 그 이후인 상품 멸균/냉장: 냉장우유 쿠팡상품번호: 1232968322 - 14802984761",
+      "link": "https://link.coupang.com/a/dvWHcC",
+      "image": "https://thumbnail3.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/7271844663914-5b099607-4b26-4ebc-ac86-6a6f3d948187.jpg",
+      "category": "식품",
+      "order": 90,
+      "active": true,
+      "id": 92
+    },
+    {
+      "name": "라끄베르 옴므 리차지 올인원 에센스, 150ml, 1개",
+      "description": "유통기한 (사용기한 표시의무 대상 상품은 사용기한): 2026-11-28 이거나 그 이후인 상품 향기: 상쾌한 향 피부타입: 모든피부 사용대상: 남성용 제형: 에센스 쿠팡상품번호: 63655113 - 22562745",
+      "link": "https://link.coupang.com/a/dvWKL6",
+      "image": "https://t5a.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/4c73/9fd74b5a36c9f41e672cf4d1e880f12975ffc56ff713b6da025b82909c3a.jpg",
+      "category": "생활",
+      "order": 91,
+      "active": true,
+      "id": 93
+    },
+    {
+      "name": "곰곰 신선한 1A 우유, 900ml, 2개",
+      "description": "소비기한(또는 유통기한): 2026-01-27 이거나 그 이후인 상품 맛: 흰우유 멸균/냉장: 냉장우유 쿠팡상품번호: 1232968322 - 2189623987",
+      "link": "https://link.coupang.com/a/dvWNHc",
+      "image": "https://t5c.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/233351842351776-df7a26c5-d4b8-4870-8646-5751ecddce86.jpg",
+      "category": "식품",
+      "order": 92,
+      "active": true,
+      "id": 94
+    },
+    {
+      "name": "리빙공식 부착형 발난로 따뜻 핫팩 29.9g 2p, 50개",
+      "description": "유통기한: 2026-08-20 이거나 그 이후인 상품 개당 중량: 29.9g 개당 수량: 2개입 사용부위: 발 형태: 파스형 쿠팡상품번호: 7072250210 - 17484730890",
+      "link": "https://link.coupang.com/a/dvWUHw",
+      "image": "https://thumbnail3.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/332789305477342-4a53aae6-b9f5-4e9c-9e38-9ea7511abed7.jpg",
+      "category": "생활",
+      "order": 93,
+      "active": true,
+      "id": 95
+    },
+    {
+      "name": "유한젠 멀티액션 액체형 표백제 리필, 1.95L, 1개",
+      "description": "구성: 리필 제형: 액체형 용기 타입: 파우치형 종류: 표백제 세탁세제 용도: 일반세제 쿠팡상품번호: 7735519244 - 20797929205",
+      "link": "https://link.coupang.com/a/dvW0ar",
+      "image": "https://thumbnail7.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/image_audit/stage/manual/107981158264041-4873b2e6-8cfb-4fbe-a10d-e6b926b1c235_1754026147727.jpg",
+      "category": "생활",
+      "order": 94,
+      "active": true,
+      "id": 96
+    },
+    {
+      "name": "유기샘 순수 땅콩버터, 140g, 1개",
+      "description": "소비기한(또는 유통기한): 2026-05-19 이거나 그 이후인 상품 쿠팡상품번호: 8082369975 - 25177204149",
+      "link": "https://link.coupang.com/a/dvW2Kz",
+      "image": "https://thumbnail5.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/2025/03/25/13/8/73bab449-b314-47f2-866e-5437a2898f7d.jpg",
+      "category": "식품",
+      "order": 95,
+      "active": true,
+      "id": 97
+    },
+    {
+      "name": "곰곰 100% 국산콩 두부, 300g, 1개",
+      "description": "소비기한(또는 유통기한): 2026-01-31 이거나 그 이후인 상품 보관방법: 냉장보관 식단관리 식품: Y 쿠팡상품번호: 8112490930 - 22989466380",
+      "link": "https://link.coupang.com/a/dvW5rQ",
+      "image": "https://thumbnail3.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/3084116630717405-5a71b6ad-4bb2-4973-8a24-a119cc77e2ba.jpg",
+      "category": "식품",
+      "order": 96,
+      "active": true,
+      "id": 98
+    },
+    {
+      "name": "펩시 제로슈거 라임향, 210ml, 30개",
+      "description": "소비기한(또는 유통기한): 2026-02-22 이거나 그 이후인 상품 맛/향: 라임 용기 타입: 캔 형태: 음료 탄산음료 종류: 제로 쿠팡상품번호: 9274048526 - 23665748009",
+      "link": "https://link.coupang.com/a/dvXbLF",
+      "image": "https://thumbnail14.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/378947857831841-03b75531-8dd7-4d79-aed8-bd089640f638.jpg",
+      "category": "식품",
+      "order": 97,
+      "active": true,
+      "id": 99
     }
   ],
   "categories": [
