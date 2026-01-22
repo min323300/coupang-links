@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-20",
+  "lastUpdated": "2026-01-22",
   "products": [
     {
       "name": "액체세제 빨래세제",
@@ -970,6 +970,26 @@
       "order": 97,
       "active": true,
       "id": 99
+    },
+    {
+      "name": "페넬로페 본보야지 메종 아기물티슈 캡형",
+      "description": "사용기한: 제품 정보 고시 참고 제조국: 제품 정보 고시 참고 물티슈 용기타입: 캡형 엠보싱 유무: 엠보싱 있음 피부타입: 모든피부 쿠팡상품번호: 7853345306 - 21411997511",
+      "link": "https://link.coupang.com/a/dxzEIn",
+      "image": "https://t2c.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/f520/aadb6ee5c0d46aa5dc6d6e16aba2fb582e565287a50e154c5534f824a1b1.jpg",
+      "category": "생활",
+      "order": 98,
+      "active": true,
+      "id": 100
+    },
+    {
+      "name": "탐사 2겹 천연펄프 핸드타월 210X200, 5000매, 3개",
+      "description": "출시 연도: 0 무늬 유무: 무늬 없음 총 수량: 15000개 겹수: 2겹 펄프종류: 천연펄프 쿠팡상품번호: 6075139071 - 19013355785",
+      "link": "https://link.coupang.com/a/dxzKTg",
+      "image": "https://thumbnail11.coupangcdn.com/thumbnails/remote/212x212ex/image/retail/images/2861567776591567-949a944f-917a-4cd7-9b37-800e4061bcfd.jpg",
+      "category": "생활",
+      "order": 99,
+      "active": true,
+      "id": 101
     }
   ],
   "categories": [
