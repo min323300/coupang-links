@@ -6,6 +6,25 @@
     <title>추천 상품 모음 | 직접 써보고 고른 제품들</title>
     <meta name="description" content="실사용 기준으로 직접 고른 추천 상품들입니다.">
     
+    <!-- ✅ Open Graph 메타 태그 (링크 공유 시 미리보기) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="추천 상품 모음 | 직접 써보고 고른 제품들">
+    <meta property="og:description" content="실사용 기준으로 직접 고른 추천 상품들! 쿠팡에서 검색하고 구매하세요 🛒">
+    <meta property="og:image" content="https://min323300.github.io/coupang-banner.png">
+    <meta property="og:url" content="https://min323300.github.io/">
+    <meta property="og:site_name" content="추천 상품 모음">
+    <meta property="og:locale" content="ko_KR">
+    
+    <!-- ✅ 트위터 카드 -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="추천 상품 모음 | 직접 써보고 고른 제품들">
+    <meta name="twitter:description" content="실사용 기준으로 직접 고른 추천 상품들! 쿠팡에서 검색하고 구매하세요 🛒">
+    <meta name="twitter:image" content="https://min323300.github.io/coupang-banner.png">
+    
+    <!-- ✅ 카카오톡 / 이미지 크기 -->
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -103,7 +122,7 @@
             text-shadow: 0 1px 3px rgba(0,0,0,0.2);
         }
 
-        /* ========== 쿠팡 검색 위젯 섹션 (NEW) ========== */
+        /* ========== 쿠팡 검색 위젯 섹션 ========== */
         .coupang-search-section {
             background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
             padding: 1rem;
@@ -556,12 +575,6 @@
             background: #E5E7EB;
         }
 
-        /* 쿠팡 이동 카운트다운 */
-        .countdown-text {
-            font-weight: 700;
-            color: #DC2626;
-        }
-
         @media (min-width: 640px) {
             .header { min-height: 320px; }
             .header h1 { font-size: 2rem; }
@@ -588,7 +601,7 @@
         </div>
     </header>
 
-    <!-- ✅ NEW: 쿠팡 검색 위젯 섹션 -->
+    <!-- ✅ 쿠팡 검색 위젯 섹션 -->
     <section class="coupang-search-section" id="coupangSearchSection">
         <div class="coupang-search-container">
             <div class="coupang-search-title">쿠팡에서 모든 상품 검색하기</div>
@@ -662,8 +675,7 @@
         let searchQuery = '';
         let autoRedirectTimer = null;
 
-        // 쿠팡 파트너스 검색 URL (검색 위젯 페이지로 스크롤)
-        // 참고: 실제 쿠팡 검색은 상단 iframe 위젯 사용
+        // 쿠팡 파트너스 검색 URL
         const COUPANG_SEARCH_BASE = 'https://www.coupang.com/np/search?component=&q=';
 
         // 검색 관련 DOM 요소
@@ -698,7 +710,7 @@
             }, 3000);
         }
 
-        // ✅ NEW: 쿠팡 검색 위젯으로 스크롤
+        // 쿠팡 검색 위젯으로 스크롤
         function scrollToCoupangSearch() {
             const coupangSection = document.getElementById('coupangSearchSection');
             coupangSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -709,10 +721,9 @@
             coupangSection.style.animation = 'pulse 0.5s ease 3';
         }
 
-        // ✅ NEW: 쿠팡으로 이동 (새 탭)
+        // 쿠팡으로 이동 (새 탭)
         function goToCoupangSearch(query) {
             const encodedQuery = encodeURIComponent(query);
-            // 쿠팡 검색 페이지로 이동 (파트너스 쿠키는 이미 상단 위젯으로 심어짐)
             window.open(COUPANG_SEARCH_BASE + encodedQuery, '_blank');
             showToast('쿠팡에서 "' + query + '" 검색 중...');
         }
@@ -794,7 +805,7 @@
                 searchResultInfo.classList.remove('visible');
             }
 
-            // ✅ 검색 결과 없을 때 → 쿠팡 검색 유도
+            // 검색 결과 없을 때 → 쿠팡 검색 유도
             if (filtered.length === 0) {
                 if (searchQuery) {
                     // 검색어가 있는데 결과 없음 → 쿠팡으로 유도
@@ -890,7 +901,7 @@
             if (e.key === 'Enter') {
                 searchInput.blur();
                 
-                // ✅ NEW: Enter 시 검색 결과 없으면 바로 쿠팡으로
+                // Enter 시 검색 결과 없으면 바로 쿠팡으로
                 if (searchQuery && productsData) {
                     const query = searchQuery.toLowerCase();
                     const hasResults = productsData.products.some(p => 
@@ -901,7 +912,6 @@
                     );
                     
                     if (!hasResults) {
-                        // 결과 없으면 쿠팡으로 바로 이동
                         goToCoupangSearch(searchQuery);
                     }
                 }
