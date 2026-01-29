@@ -161,12 +161,49 @@
         .widget-wrapper {
             background: white;
             border-radius: 12px;
-            padding: 0.5rem;
+            padding: 0.8rem;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        .widget-wrapper iframe {
-            border-radius: 8px;
+        .custom-search-box {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .custom-search-input {
+            flex: 1;
+            padding: 0.9rem 1rem;
+            border: 2px solid #E5E7EB;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+
+        .custom-search-input:focus {
+            border-color: #F59E0B;
+            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.2);
+        }
+
+        .custom-search-input::placeholder {
+            color: #9CA3AF;
+        }
+
+        .custom-search-btn {
+            padding: 0.9rem 1.2rem;
+            background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .custom-search-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
         }
 
         .search-widget-hint {
@@ -609,12 +646,15 @@
         </div>
     </header>
 
-    <!-- ✅ 검색 위젯 섹션 (쿠팡 언급 제거) -->
+    <!-- ✅ 통합 검색 섹션 (iframe 제거, 직접 검색창) -->
     <section class="search-widget-section" id="searchWidgetSection">
         <div class="search-widget-container">
             <div class="search-widget-title">다양한 상품 검색하기</div>
             <div class="widget-wrapper">
-                <iframe src="https://coupa.ng/clompd" width="100%" height="75" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+                <div class="custom-search-box">
+                    <input type="text" class="custom-search-input" id="mallSearchInput" placeholder="상품명이나 브랜드명을 입력하세요!">
+                    <button class="custom-search-btn" id="mallSearchBtn" type="button">🔍</button>
+                </div>
             </div>
             <p class="search-widget-hint">👆 위 검색창에서 검색하면 쇼핑몰로 바로 연결됩니다</p>
         </div>
@@ -930,6 +970,26 @@
         document.getElementById('popupOverlay').addEventListener('click', function(e) {
             if (e.target === this) {
                 closePopup(false);
+            }
+        });
+
+        // ✅ 상단 통합 검색창 이벤트
+        const mallSearchInput = document.getElementById('mallSearchInput');
+        const mallSearchBtn = document.getElementById('mallSearchBtn');
+
+        mallSearchBtn.addEventListener('click', function() {
+            const query = mallSearchInput.value.trim();
+            if (query) {
+                goToSearch(query);
+            }
+        });
+
+        mallSearchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                const query = mallSearchInput.value.trim();
+                if (query) {
+                    goToSearch(query);
+                }
             }
         });
 
